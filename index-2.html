@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Técnico em T.I.</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+<img class="logo"
+src="https://www.firjan.com.br/custom/FIRJAN/Portal/images/branding/brd-inst-firjansenai.png"
+alt="Logo SENAI">
+
+<h1>Técnico em T.I.</h1>
+
+<div class="topo-direita">
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+</div>
+
+</header>
+
+<!-- MENU LATERAL -->
+
+<div id="menu" class="menu">
+
+<span class="fechar-menu" onclick="fecharMenu()">✖</span>
+
+<h2>Configurações</h2>
+
+<div class="config-item">
+
+<label>Tamanho da Fonte</label>
+
+<select onchange="alterarFonte(this.value)">
+<option value="14">Pequena</option>
+<option value="16" selected>Média</option>
+<option value="20">Grande</option>
+</select>
+
+</div>
+
+<hr>
+
+<hr>
+
+<h2>Docs e Mídias</h2>
+
+<div class="menu-links">
+
+<button class="menu-link-btn" onclick="abrirPopupAreas()">
+📚 Explicação das Áreas de T.I.
+</button>
+
+<button class="menu-link-btn" onclick="abrirPopupDocs()">
+    📄 Documentos
+</button>
+
+<a>
+🎥 Mídias
+</a>
+
+</div>
+
+<hr>
+
+<h2>Sobre Nós</h2>
+
+<div class="integrantes">
+
+<p>Bernardo Oliveira Martins</p>
+<p>Pedro Almeida G. Couto</p>
+<p>Ana Beatriz Botelho</p>
+<p>Lucas Gabriel Silva</p>
+<p>Ana Lara Pinho Florenço</p>
+
+</div>
+
+<hr>
+
+<h2>fontes</h2>
+
+<div class="integrantes">
+
+<p>getguru</p>
+<p>noticias concursos</p>
+<p>mosten</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+<!-- CAPA (AGORA COM FUNDO VIA CSS) -->
+
+<section class="hero">
+
+<div class="hero-texto">
+
+<h2>Mercado de Tecnologia da Informação</h2>
+
+<p>
+A Tecnologia da Informação é uma das áreas que mais crescem no Brasil e no mundo.
+O setor oferece oportunidades em desenvolvimento de software, segurança da informação,
+computação em nuvem, inteligência artificial, redes e suporte técnico.
+</p>
+
+</div>
+
+</section>
+
+<!-- IMAGEM PRINCIPAL -->
+
+<section class="banner">
+
+<img
+src="https://i.pinimg.com/1200x/8a/6e/45/8a6e45fa958902ef13a359e3e11f68e5.jpg"
+alt="Tecnologia">
+
+</section>
+
+<!-- GRÁFICO 1 -->
+
+<section class="secao">
+
+<h2>Vagas de T.I.</h2>
+
+<div class="grafico-canva">
+
+<iframe
+loading="lazy"
+src="https://www.canva.com/design/DAHM8ZPPjH4/C4t2j9g32Nd7USoxZp13dA/view?embed"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- IMAGEM INTERMEDIÁRIA -->
+
+<section class="banner">
+
+<img
+src="https://i.pinimg.com/1200x/6c/fa/1b/6cfa1bbed1680d08fc71661321486c87.jpg"
+alt="Tecnologia Intermediária">
+
+</section>
+
+<!-- GRÁFICO 2 -->
+
+<section class="secao">
+
+<h2>Áreas Mais Procuradas</h2>
+
+<div class="grafico-canva">
+
+<iframe
+loading="lazy"
+src="https://www.canva.com/design/DAHM8dgabps/x6OBCkaUwTXo8PEoAOd8gg/view?embed"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- RODAPÉ -->
+
+<!-- VÍDEO SOBRE T.I. -->
+
+<section class="secao">
+
+    <h2>podcast</h2>
+
+    <div class="video-container">
+
+        <iframe
+            width="100%"
+            height="600"
+            src="https://www.youtube.com/embed/AIOGYplVT7g"
+            title="Vídeo sobre Tecnologia da Informação"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<footer>
+
+<h3>Técnico em Tecnologia da Informação</h3>
+
+<p>
+Projeto desenvolvido para apresentação sobre o mercado de Tecnologia da Informação.
+</p>
+
+
+</div>
+
+</section>
+
+</footer>
+<div id="popupAreas" class="popup-overlay">
+
+<div class="popup-box">
+
+<span class="fechar-popup" onclick="fecharPopupAreas()">✖</span>
+
+<h2>Áreas de Tecnologia da Informação</h2>
+
+<div class="popup-scroll">
+
+<h3>1. Desenvolvimento de Software</h3>
+<p><b>O que é:</b> criação de sistemas, apps, sites e softwares.</p>
+
+<p><b>O que se estuda:</b><br>
+• Lógica de programação<br>
+• JavaScript, Python, Java, C#<br>
+• Banco de dados SQL/NoSQL<br>
+• Engenharia de software<br>
+• Metodologias ágeis</p>
+
+<p><b>Mercado:</b> +800 mil vagas até 2027 (Brasscom).</p>
+<p><b>Salário:</b> R$ 3.000 até R$ 25.000+</p>
+
+<hr>
+
+<h3>2. Segurança da Informação</h3>
+<p><b>O que é:</b> proteção de sistemas e dados contra ataques.</p>
+
+<p><b>O que se estuda:</b><br>
+• Criptografia<br>
+• Redes e firewalls<br>
+• Ethical hacking<br>
+• LGPD<br>
+• Cloud security</p>
+
+<p><b>Mercado:</b> crescimento de 12% ao ano globalmente.</p>
+<p><b>Salário:</b> R$ 4.000 até R$ 30.000+</p>
+
+<hr>
+
+<h3>3. Ciência de Dados e IA</h3>
+<p><b>O que é:</b> uso de dados e inteligência artificial para decisões.</p>
+
+<p><b>O que se estuda:</b><br>
+• Python e estatística<br>
+• Machine Learning<br>
+• Deep Learning<br>
+• Big Data</p>
+
+<p><b>Aplicações:</b> Netflix, Spotify, bancos, ChatGPT.</p>
+<p><b>Salário:</b> R$ 5.000 até R$ 35.000+</p>
+
+<hr>
+
+<h3>4. Computação em Nuvem</h3>
+<p><b>O que é:</b> servidores e sistemas online (cloud).</p>
+
+<p><b>O que se estuda:</b><br>
+• AWS, Azure, Google Cloud<br>
+• Docker e Kubernetes<br>
+• Infraestrutura de sistemas</p>
+
+<p><b>Mercado:</b> maioria das empresas já usa cloud.</p>
+<p><b>Salário:</b> R$ 4.000 até R$ 30.000+</p>
+
+<hr>
+
+<h3>5. Redes de Computadores</h3>
+<p><b>O que é:</b> conexão e comunicação entre sistemas.</p>
+
+<p><b>O que se estuda:</b><br>
+• TCP/IP<br>
+• Roteadores e switches<br>
+• Protocolos de rede<br>
+• Infraestrutura</p>
+
+<p><b>Importância:</b> base de toda internet e cloud.</p>
+<p><b>Salário:</b> R$ 3.000 até R$ 22.000+</p>
+
+<hr>
+
+<h3>Resumo Final</h3>
+<p>
+• Desenvolvimento → mais vagas<br>
+• Segurança → mais crescimento<br>
+• Dados/IA → maiores salários<br>
+• Cloud → base da TI moderna<br>
+• Redes → infraestrutura essencial
+</p>
+
+</div>
+
+</div>
+
+</div>
+<div id="popupDocs" class="popup-overlay">
+
+    <div class="popup-box">
+
+        <span class="fechar-popup" onclick="fecharPopupDocs()">✖</span>
+
+        <h2>Técnico em Tecnologia da Informação</h2>
+
+        <div class="popup-scroll">
+
+            <h3>Autores</h3>
+
+            <p>
+            Ana Beatriz Botelho Lacerda da Silva<br>
+            Ana Lara Pinho Florencio<br>
+            Bernardo de Oliveira Martins<br>
+            Lucas Gabriel de Oliveira Jardim da Silva<br>
+            Pedro Almeida Gonçalves Couto
+            </p>
+
+            <p><b>Orientador:</b> Filipe Mello Massi</p>
+            <p><b>Curso:</b> Desenvolvimento de Sistemas</p>
+            <p><b>Data:</b> 11/06/2026</p>
+
+            <hr>
+
+            <h3>Técnico em TI</h3>
+
+            <p>
+            O Técnico em TI atua em manutenção de sistemas, suporte técnico,
+            redes, segurança da informação, documentação e resolução de problemas.
+            É responsável por garantir o funcionamento da infraestrutura tecnológica
+            de empresas e organizações.
+            </p>
+
+            <h3>Principais Funções</h3>
+
+            <p>
+            • Manutenção de Sistemas<br>
+            • Resolução de Problemas<br>
+            • Suporte ao Usuário<br>
+            • Gerenciamento de Redes<br>
+            • Segurança de Dados<br>
+            • Documentação Técnica
+            </p>
+
+            <h3>Salário Inicial</h3>
+
+            <p>
+            Entre R$ 2.000,00 e R$ 4.000,00 por mês.
+            </p>
+
+            <h3>Ferramentas Utilizadas</h3>
+
+            <p>
+            • Windows, Linux e macOS<br>
+            • Wireshark e Nagios<br>
+            • TeamViewer e AnyDesk<br>
+            • CPU-Z, Firewalls e Antivírus
+            </p>
+
+            <h3>Cargos da Área</h3>
+
+            <p>
+            1. Técnico Júnior<br>
+            2. Técnico Sênior<br>
+            3. Administrador de Sistemas<br>
+            4. Gerente de TI
+            </p>
+
+            <h3>Profissões Relacionadas</h3>
+
+            <p>
+            • Programador Web<br>
+            • Engenheiro de Software<br>
+            • Analista de Dados<br>
+            • Desenvolvedor Mobile<br>
+            • Desenvolvedor de Jogos<br>
+            • Técnico em Informática
+            </p>
+
+            <h3>Conclusão</h3>
+
+            <p>
+            O Técnico em TI é um profissional essencial para empresas modernas,
+            sendo uma área em constante crescimento e com grande demanda
+            no mercado de trabalho.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="back.js"></script>
+
+</body>
+</html>
