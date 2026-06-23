@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lucasg225.github.io/Tecnico-em-TI/sitemap.xml
