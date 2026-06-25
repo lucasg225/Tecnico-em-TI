@@ -563,3 +563,29 @@ footer p{
 .suporte{
     background:linear-gradient(135deg,#f59e0b,#b45309);
 }
+/* Botões abaixo do título */
+
+.atalhos-topo{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.botao-topo{
+    background:#0a84ff;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:40px;
+    font-weight:700;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.botao-topo:hover{
+    transform:translateY(-4px);
+    background:#0066d6;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
