@@ -220,34 +220,35 @@ footer p{
 
 @media(max-width:768px){
 
-    header{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        gap:10px;
-        height:auto;
-        padding:15px 20px;
+    header h1{
+        font-size:22px;
     }
 
     .logo{
-        position:static;
         width:100px;
-        height:auto;
+        height:45px;
+        left:10px;
     }
 
-    header h1{
-        font-size:20px;
-        text-align:center;
-        max-width:100%;
+    .menu{
+        width:280px;
     }
 
-    .menu-btn{
-        position:absolute;
-        top:15px;
-        right:15px;
+    .hero h2{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .grafico-canva iframe{
+        height:500px;
     }
 }
-
+.secao{
+    position:relative;
+}
 
 /* botão no canto do card */
 .btn-areas-canto{
@@ -386,4 +387,117 @@ footer p{
 .menu-link-btn:hover{
     background:#5ce1e6;
     transform:translateY(-2px);
+}
+
+/* CAIXAS DAS ÁREAS */
+
+.caixas-ti{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.caixa-ti{
+    width:350px;
+    min-height:450px;
+
+    background:#0d2235;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.caixa-ti:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,207,255,0.25);
+}
+
+.caixa-ti img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:10px;
+
+    margin-bottom:20px;
+}
+
+.caixa-ti h3{
+    color:#00cfff;
+    margin-bottom:15px;
+    font-size:26px;
+}
+
+.caixa-ti p{
+    line-height:1.7;
+    color:#d5d5d5;
+    font-size:17px;
+}
+
+/* CAIXA IMAGEM + TEXTO */
+
+.destaque-ti{
+    background:#102a42;
+}
+
+.destaque-conteudo{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.destaque-conteudo img{
+    width:350px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.destaque-texto{
+    flex:1;
+}
+
+.destaque-texto h2{
+    color:#00cfff;
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.destaque-texto p{
+    line-height:1.8;
+    font-size:18px;
+    color:#d5d5d5;
+    text-align:justify;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .destaque-conteudo{
+        flex-direction:column;
+    }
+
+    .destaque-conteudo img{
+        width:100%;
+        height:auto;
+    }
+
+    .destaque-texto h2{
+        text-align:center;
+    }
 }
