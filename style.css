@@ -501,3 +501,65 @@ footer p{
         text-align:center;
     }
 }
+/* CARDS DE ÁREAS */
+
+.cards-ti{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:35px;
+}
+
+.card-ti{
+    border-radius:20px;
+    padding:30px;
+    color:white;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    cursor:default;
+}
+
+.card-ti:hover{
+    transform:translateY(-8px);
+}
+
+.card-ti span{
+    font-size:40px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.card-ti h3{
+    margin-bottom:12px;
+    font-size:1.3rem;
+}
+
+.card-ti p{
+    line-height:1.6;
+}
+
+/* CORES */
+
+.desenvolvimento{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+}
+
+.seguranca{
+    background:linear-gradient(135deg,#dc2626,#991b1b);
+}
+
+.ia{
+    background:linear-gradient(135deg,#7c3aed,#5b21b6);
+}
+
+.cloud{
+    background:linear-gradient(135deg,#06b6d4,#0e7490);
+}
+
+.redes{
+    background:linear-gradient(135deg,#059669,#065f46);
+}
+
+.suporte{
+    background:linear-gradient(135deg,#f59e0b,#b45309);
+}
