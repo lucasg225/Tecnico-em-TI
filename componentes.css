@@ -1,0 +1,357 @@
+/* ========================= */
+/* ESTILO GERAL */
+/* ========================= */
+
+body{
+    margin:0;
+    font-family:'League Spartan',sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+.secao{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 30px;
+}
+
+.secao h2{
+    text-align:center;
+    font-size:38px;
+    color:#0b5ed7;
+    margin-bottom:25px;
+}
+
+.secao p{
+    font-size:18px;
+}
+
+/* ========================= */
+/* BANNER */
+/* ========================= */
+
+.banner img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    display:block;
+}
+
+/* ========================= */
+/* INTRO */
+/* ========================= */
+
+.intro{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    font-size:20px;
+}
+
+/* ========================= */
+/* GRID DOS COMPONENTES */
+/* ========================= */
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card-info{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card-info:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.card-info img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
+.card-info h3{
+
+    color:#0b5ed7;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.card-info p{
+
+    font-size:17px;
+
+}
+/* ========================= */
+/* CORES DOS CARTÕES */
+/* ========================= */
+
+.card-info:nth-child(1){
+    border-top:6px solid #0d6efd;
+}
+
+.card-info:nth-child(2){
+    border-top:6px solid #198754;
+}
+
+.card-info:nth-child(3){
+    border-top:6px solid #dc3545;
+}
+
+.card-info:nth-child(4){
+    border-top:6px solid #fd7e14;
+}
+
+.card-info:nth-child(5){
+    border-top:6px solid #6f42c1;
+}
+
+.card-info:nth-child(6){
+    border-top:6px solid #20c997;
+}
+
+/* ========================= */
+/* LISTAS */
+/* ========================= */
+
+.card-info ul{
+
+    margin-top:15px;
+
+    padding-left:20px;
+
+}
+
+.card-info li{
+
+    margin-bottom:8px;
+
+    font-size:17px;
+
+}
+
+/* ========================= */
+/* TEXTO CENTRAL */
+/* ========================= */
+
+.texto-centro{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 40px;
+
+    font-size:20px;
+
+    color:#555;
+
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.botao{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:14px 28px;
+
+    background:#0b5ed7;
+
+    color:white;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.botao:hover{
+
+    background:#084298;
+
+    transform:translateY(-3px);
+
+}
+
+/* ========================= */
+/* ANIMAÇÃO */
+/* ========================= */
+
+.card-info{
+
+    animation:aparecer .8s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+footer{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    margin-top:70px;
+
+}
+
+footer h3{
+
+    margin-bottom:15px;
+
+    font-size:28px;
+
+}
+
+footer p{
+
+    font-size:18px;
+
+    margin:8px 0;
+
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+@media(max-width:900px){
+
+.cards-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.banner img{
+
+height:250px;
+
+}
+
+.secao{
+
+padding:50px 20px;
+
+}
+
+.secao h2{
+
+font-size:30px;
+
+}
+
+.card-info h3{
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.secao h2{
+
+font-size:26px;
+
+}
+
+.card-info{
+
+padding:20px;
+
+}
+
+.card-info img{
+
+height:180px;
+
+}
+
+.texto-centro{
+
+font-size:18px;
+
+}
+
+footer h3{
+
+font-size:24px;
+
+}
+
+}
