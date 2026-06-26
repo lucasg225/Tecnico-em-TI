@@ -1,453 +1,1387 @@
+/* ==========================================================
+   TÉCNICO EM TECNOLOGIA DA INFORMAÇÃO
+   STYLE.CSS V2.0
+   Parte 1
+========================================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'League Spartan', sans-serif;
+    font-family:'League Spartan',sans-serif;
 }
 
-html,
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    width:100%;
+
+    background:
+    radial-gradient(circle at top,#13385c 0%,#071826 45%,#04101a 100%);
+
+    color:#eef5ff;
+
     overflow-x:hidden;
+
 }
 
-body{
+/* Barra de rolagem */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
     background:#071826;
-    color:white;
-    line-height:1.6;
 }
 
-/* CABEÇALHO */
+::-webkit-scrollbar-thumb{
+
+    background:#0a84ff;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#4bb7ff;
+
+}
+
+/* ===================================
+            HEADER
+=================================== */
 
 header{
+
     position:sticky;
     top:0;
-    z-index:1000;
+
+    z-index:9999;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:16px;
-    min-height:100px;
-    padding:12px 18px;
-    background:#0d2235;
-    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+
+    padding:18px 35px;
+
+    backdrop-filter:blur(16px);
+
+    background:rgba(7,24,38,.85);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
 }
+
+/* LOGO */
 
 .logo{
-    flex:0 0 auto;
-    width:110px;
-    max-width:110px;
+
+    width:150px;
     height:auto;
     object-fit:contain;
-    display:block;
-    background:transparent;
+
+    transition:.35s;
+
 }
 
-.titulo-site{
-    flex:1 1 auto;
-    min-width:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+.logo:hover{
+
+    transform:scale(1.05);
+
 }
+
+/* TÍTULO */
 
 header h1{
-    max-width:100%;
-    font-size:clamp(1.2rem, 2vw + 0.55rem, 2rem);
-    line-height:1.15;
+
+    flex:1;
+
     text-align:center;
+
     color:white;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    text-shadow:
+    0 0 15px rgba(0,180,255,.2);
+
 }
 
-.topo-direita{
-    flex:0 0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-}
+/* BOTÃO MENU */
 
 .menu-btn{
-    background:none;
+
+    width:55px;
+    height:55px;
+
     border:none;
+
+    border-radius:15px;
+
+    background:#0a84ff;
+
     color:white;
-    font-size:clamp(1.75rem, 2.4vw, 2.25rem);
+
+    font-size:30px;
+
     cursor:pointer;
-    line-height:1;
-    padding:8px 10px;
-    border-radius:10px;
-    transition:0.25s;
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 25px rgba(0,132,255,.30);
+
 }
 
 .menu-btn:hover{
-    background:rgba(255,255,255,0.08);
-}
 
-/* ATALHOS ABAIXO DO TÍTULO */
+    background:#2fa2ff;
 
-.atalhos-home{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap;
-    padding:16px 18px;
-    background:#10263d;
-}
-
-.atalhos-home a{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    color:white;
-    background:#0a84ff;
-    padding:12px 20px;
-    border-radius:999px;
-    font-weight:700;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    transition:0.3s;
-    min-width:180px;
-    text-align:center;
-}
-
-.atalhos-home a:hover{
-    background:#0066d6;
     transform:translateY(-3px);
+
 }
 
-/* MENU */
-
-.menu{
-    position:fixed;
-    top:0;
-    right:-350px;
-    width:350px;
-    height:100%;
-    background:#102a42;
-    padding:30px;
-    transition:0.4s;
-    z-index:9999;
-    overflow-y:auto;
-    box-shadow:-5px 0 20px rgba(0,0,0,0.5);
-}
-
-.fechar-menu{
-    display:inline-block;
-    background:none;
-    border:none;
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-    float:right;
-}
-
-.menu h2{
-    margin-top:25px;
-    margin-bottom:15px;
-    color:#00cfff;
-}
-
-.menu hr{
-    margin:25px 0;
-    border:none;
-    height:1px;
-    background:rgba(255,255,255,0.2);
-}
-
-.config-item{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.config-item label{
-    color:white;
-}
-
-.config-item select{
-    padding:10px;
-    border:none;
-    border-radius:10px;
-    font:inherit;
-}
-
-.integrantes p{
-    padding:8px 0;
-    border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-.menu-links{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-.menu-link-btn{
-    display:block;
-    width:100%;
-    padding:12px;
-    background:#00cfff;
-    color:#071826;
-    text-decoration:none;
-    text-align:center;
-    border:none;
-    border-radius:10px;
-    font-weight:700;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.menu-link-btn:hover{
-    background:#5ce1e6;
-    transform:translateY(-2px);
-}
-
-/* HERO */
+/* ===================================
+          HERO
+=================================== */
 
 .hero{
-    padding:clamp(56px, 7vw, 90px) 10%;
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:80px 8%;
+
     text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
     background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("https://i.pinimg.com/1200x/72/e7/c4/72e7c45fe83fec3e1bcb4b82f4fd118e.jpg");
+
+    linear-gradient(rgba(5,20,35,.82),rgba(5,20,35,.88)),
+
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=2000");
+
     background-size:cover;
+
     background-position:center;
-    background-repeat:no-repeat;
+
 }
 
+/* brilho */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+background:
+
+radial-gradient(circle,
+rgba(0,150,255,.25),
+transparent 70%);
+
+top:-200px;
+right:-150px;
+
+pointer-events:none;
+
+}
+
+/* texto */
+
 .hero-texto{
-    max-width:960px;
-    margin:0 auto;
+
+    max-width:950px;
+
+    position:relative;
+
+    z-index:2;
+
 }
 
 .hero h2{
-    font-size:clamp(1.6rem, 3.5vw, 2.8rem);
-    margin-bottom:20px;
-    color:#00cfff;
+
+    font-size:3.6rem;
+
+    color:white;
+
+    margin-bottom:30px;
+
+    line-height:1.1;
+
 }
 
 .hero p{
+
+    color:#d7e6f5;
+
+    font-size:1.25rem;
+
+    line-height:1.9;
+
     max-width:900px;
+
     margin:auto;
-    font-size:clamp(1rem, 1.25vw, 1.15rem);
-    line-height:1.8;
+
 }
 
-/* BANNER */
+/* ===================================
+      BOTÕES ABAIXO DO HERO
+=================================== */
 
-.banner{
-    padding:40px 24px;
-    text-align:center;
+.atalhos-home{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
 }
 
-.banner img{
-    width:min(100%, 1000px);
-    border-radius:20px;
-    display:block;
-    margin:auto;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+.atalhos-home a{
+
+padding:15px 30px;
+
+background:linear-gradient(135deg,#0a84ff,#29b3ff);
+
+color:white;
+
+font-weight:700;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.35s;
+
+box-shadow:
+0 10px 30px rgba(0,132,255,.35);
+
 }
 
-/* SEÇÕES */
+.atalhos-home a:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 20px 35px rgba(0,132,255,.45);
+
+}
+
+/* ===================================
+      SEÇÕES
+=================================== */
 
 .secao{
-    width:min(1200px, calc(100% - 32px));
-    margin:40px auto;
-    padding:30px;
-    background:#102a42;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    overflow:hidden;
+
+width:min(1200px,92%);
+
+margin:70px auto;
+
+padding:45px;
+
+border-radius:28px;
+
+background:
+
+rgba(16,42,66,.78);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.06);
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.30);
+
 }
 
 .secao h2{
-    text-align:center;
-    color:#00cfff;
-    margin-bottom:25px;
+
+font-size:2.2rem;
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#66d3ff;
+
 }
 
-.secao p,
-.secao li{
-    color:#d5d5d5;
+.secao p{
+
+font-size:1.08rem;
+
+line-height:1.9;
+
+color:#d9e6ef;
+
 }
 
-.secao ul{
-    padding-left:22px;
+/* ===================================
+        TÍTULOS
+=================================== */
+
+h3{
+
+color:#8bdfff;
+
 }
 
-.secao li{
+strong{
+
+color:white;
+
+}
+/* ==========================================================
+   STYLE.CSS V2.0
+   PARTE 2
+   Cards • Banners • Gráficos • Vídeos
+========================================================== */
+
+
+/* ===================================
+        CARDS DAS ÁREAS
+=================================== */
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.card-ti,
+.card-info{
+
+    background:linear-gradient(180deg,#15324d,#0d2236);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.card-ti:hover,
+.card-info:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 30px 50px rgba(0,132,255,.25);
+
+    border-color:#3aa8ff;
+
+}
+
+.card-ti img,
+.card-info img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.card-ti h3,
+.card-info h3{
+
+    padding:25px 25px 10px;
+
+    font-size:1.45rem;
+
+    color:#66d3ff;
+
+}
+
+.card-ti p,
+.card-info p{
+
+    padding:0 25px;
+
+    color:#dce8f2;
+
+    line-height:1.8;
+
+}
+
+.card-ti ul,
+.card-info ul{
+
+    margin:20px 40px;
+
+    color:white;
+
+    line-height:2;
+
+}
+
+.card-ti li,
+.card-info li{
+
     margin-bottom:8px;
+
 }
 
-/* GRÁFICOS CANVA */
+.card-ti strong,
+.card-info strong{
+
+    color:#79d8ff;
+
+}
+
+
+/* ===================================
+        BANNERS
+=================================== */
+
+.banner{
+
+    width:min(1200px,92%);
+
+    margin:60px auto;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.banner img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.banner:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ===================================
+        IFRAMES
+=================================== */
 
 .grafico-canva{
-    width:100%;
-    max-width:1100px;
-    margin:auto;
+
+    margin-top:35px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.35);
+
 }
 
 .grafico-canva iframe{
+
     width:100%;
-    height:700px;
+
+    height:600px;
+
     border:none;
-    border-radius:20px;
-    display:block;
-    background:white;
+
 }
 
-/* RODAPÉ */
 
-footer{
-    background:#0d2235;
-    text-align:center;
-    padding:40px 20px;
-    margin-top:60px;
+/* ===================================
+        VÍDEO
+=================================== */
+
+.video-container{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    margin-top:30px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.40);
+
 }
 
-footer h3{
-    color:#00cfff;
-    margin-bottom:15px;
-}
+.video-container iframe{
 
-footer p{
-    color:#d5d5d5;
-}
-
-/* POPUPS */
-
-.popup-overlay{
-    position:fixed;
-    top:0;
-    left:0;
     width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:99999;
-    padding:16px;
+
+    height:600px;
+
+    border:none;
+
 }
+
+
+/* ===================================
+        BOTÕES DO MENU
+=================================== */
+
+.menu-link-btn{
+
+    width:100%;
+
+    margin:12px 0;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:#0a84ff;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.menu-link-btn:hover{
+
+    background:#2aa7ff;
+
+    transform:translateX(5px);
+
+}
+
+
+/* ===================================
+        POPUPS
+=================================== */
 
 .popup-box{
-    background:#102a42;
-    width:min(90%, 800px);
-    max-height:80vh;
-    border-radius:20px;
-    padding:25px;
-    position:relative;
-    color:white;
-    overflow:hidden;
-}
 
-.popup-scroll{
-    max-height:65vh;
-    overflow-y:auto;
-    padding-right:10px;
+    background:#102a42;
+
+    color:white;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.45);
+
 }
 
 .popup-box h2{
-    color:#5ce1e6;
-    margin-bottom:15px;
+
+    color:#6bd5ff;
+
 }
 
 .popup-box h3{
-    color:#5ce1e6;
-    margin-top:15px;
+
+    color:#92e4ff;
+
+}
+
+.popup-scroll{
+
+    color:#dfeaf4;
+
+}
+
+
+/* ===================================
+          RODAPÉ
+=================================== */
+
+footer{
+
+    margin-top:80px;
+
+    padding:60px 20px;
+
+    background:#06111d;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h3{
+
+    font-size:2rem;
+
+    color:#6bd5ff;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#cfdbe6;
+
+    line-height:1.8;
+
+}
+
+
+/* ===================================
+        ANIMAÇÃO
+=================================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero,
+.secao,
+.banner,
+.card-ti,
+.card-info{
+
+    animation:aparecer .8s ease;
+
+}
+
+
+/* ===================================
+        RESPONSIVO
+=================================== */
+
+@media(max-width:900px){
+
+.hero{
+
+min-height:70vh;
+
+padding:70px 30px;
+
+}
+
+.hero h2{
+
+font-size:2.4rem;
+
+}
+
+.hero p{
+
+font-size:1.05rem;
+
+}
+
+.grafico-canva iframe{
+
+height:400px;
+
+}
+
+.video-container iframe{
+
+height:350px;
+
+}
+
+.banner{
+
+border-radius:20px;
+
+}
+
+.secao{
+
+padding:30px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.cards-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.card-ti img,
+.card-info img{
+
+height:200px;
+
+}
+
+footer h3{
+
+font-size:1.5rem;
+
+}
+}
+/* ==========================================================
+   STYLE.CSS V2.0
+   PARTE 3
+   Menu • Popups • Responsividade • Extras
+==========================================================*/
+
+
+/* ===========================
+      MENU LATERAL
+=========================== */
+
+.menu{
+
+    position:fixed;
+
+    top:0;
+    right:-380px;
+
+    width:340px;
+    max-width:90%;
+
+    height:100vh;
+
+    background:rgba(8,22,36,.98);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+    z-index:99999;
+
+    overflow-y:auto;
+
+    padding:35px;
+
+    box-shadow:
+    -15px 0 40px rgba(0,0,0,.45);
+
+}
+
+.menu.ativo{
+
+    right:0;
+
+}
+
+.menu h2{
+
+    color:#67d7ff;
+
+    margin-top:20px;
+    margin-bottom:15px;
+
+}
+
+.menu hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin:25px 0;
+
+}
+
+.config-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.config-item label{
+
+    color:white;
+
+}
+
+.config-item select{
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:none;
+
+    background:#15324d;
+
+    color:white;
+
+}
+
+.menu-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.menu-links a,
+.menu-link-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#0a84ff;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.menu-links a:hover,
+.menu-link-btn:hover{
+
+    background:#2da7ff;
+
+    transform:translateX(5px);
+
+}
+
+.integrantes p{
+
+    color:#d9e8f3;
+
+    margin:8px 0;
+
+}
+
+.fechar-menu{
+
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    font-size:30px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.fechar-menu:hover{
+
+    color:#67d7ff;
+
+    transform:rotate(90deg);
+
+}
+
+
+/* ===========================
+        POPUPS
+=========================== */
+
+.popup-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    z-index:99998;
+
+}
+
+.popup-box{
+
+    width:900px;
+
+    max-width:95%;
+
+    max-height:90vh;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:#0f2235;
+
+}
+
+.popup-scroll{
+
+    max-height:70vh;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    line-height:1.8;
+
+}
+
+.popup-scroll p{
+
+    color:#dce7ef;
+
+}
+
+.popup-scroll hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin:30px 0;
+
 }
 
 .fechar-popup{
-    position:absolute;
-    top:15px;
-    right:20px;
-    font-size:22px;
+
+    float:right;
+
+    font-size:28px;
+
+    margin:20px;
+
     cursor:pointer;
+
+    transition:.3s;
+
 }
 
-@media (max-width: 768px){
+.fechar-popup:hover{
 
-    header{
-        min-height:auto;
-        padding:10px 12px;
-        gap:10px;
-    }
+    color:#4bc6ff;
 
-    .logo{
-        width:68px;
-        max-width:68px;
-    }
-
-    header h1{
-        font-size:1.05rem;
-        line-height:1.15;
-    }
-
-    .menu-btn{
-        font-size:1.8rem;
-        padding:6px 8px;
-    }
-
-    .menu{
-        width:min(86vw, 320px);
-    }
-
-    .atalhos-home{
-        padding:12px;
-        gap:10px;
-    }
-
-    .atalhos-home a{
-        min-width:0;
-        width:calc(50% - 5px);
-        padding:11px 14px;
-        font-size:0.95rem;
-    }
-
-    .hero{
-        padding:54px 14px;
-    }
-
-    .secao{
-        width:calc(100% - 20px);
-        padding:20px 16px;
-        margin:28px auto;
-    }
-
-    .secao h2{
-        font-size:1.45rem;
-    }
-
-    .banner{
-        padding:16px 10px;
-    }
-
-    .grafico-canva iframe{
-        height:500px;
-    }
 }
 
-@media (max-width: 480px){
 
-    .atalhos-home a{
-        width:100%;
-    }
+/* ===========================
+      HERO BOTÕES
+=========================== */
 
-    .hero h2{
-        font-size:1.55rem;
-    }
+.hero-botoes{
 
-    .hero p{
-        font-size:1rem;
-    }
+    margin-top:45px;
 
-    .secao h2{
-        font-size:1.3rem;
-    }
+    display:flex;
 
-    footer h3{
-        font-size:1.3rem;
-    }
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
 }
+
+.hero-botoes a{
+
+    padding:18px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(135deg,#0a84ff,#45c4ff);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,132,255,.35);
+
+}
+
+.hero-botoes a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* ===========================
+      VOLTAR AO TOPO
+=========================== */
+
+#topo{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#0a84ff;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    text-decoration:none;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,132,255,.35);
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+#topo:hover{
+
+    transform:translateY(-5px);
+
+    background:#36b0ff;
+
+}
+
+
+/* ===========================
+      EFEITO NOS TÍTULOS
+=========================== */
+
+.secao h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:4px;
+
+    margin:12px auto 0;
+
+    border-radius:50px;
+
+    background:#0a84ff;
+
+}
+
+
+/* ===========================
+      LINKS
+=========================== */
+
+a{
+
+    color:#5dd7ff;
+
+}
+
+a:hover{
+
+    color:white;
+
+}
+
+
+/* ===========================
+      RESPONSIVIDADE
+=========================== */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+padding:20px;
+
+}
+
+.logo{
+
+width:130px;
+
+}
+
+header h1{
+
+font-size:1.7rem;
+
+text-align:center;
+
+}
+
+.menu{
+
+width:100%;
+
+max-width:100%;
+
+}
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero h2{
+
+font-size:2.2rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.popup-box{
+
+width:100%;
+
+}
+
+}
+
+
+@media(max-width:600px){
+
+.secao{
+
+padding:25px;
+
+margin:40px auto;
+
+}
+
+.hero{
+
+min-height:65vh;
+
+}
+
+.hero h2{
+
+font-size:1.8rem;
+
+}
+
+.hero p{
+
+font-size:.95rem;
+
+}
+
+.hero-botoes{
+
+flex-direction:column;
+
+}
+
+.hero-botoes a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.menu-btn{
+
+width:48px;
+
+height:48px;
+
+font-size:24px;
+
+}
+
+footer{
+
+padding:40px 20px;
+
+}
+
+}
+
+
+/* ===========================
+      ANIMAÇÕES
+=========================== */
+
+@keyframes flutuar{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.logo{
+
+animation:flutuar 5s ease-in-out infinite;
+
+}
+
+
+/* brilho suave */
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+background:
+
+radial-gradient(circle,
+
+rgba(0,132,255,.18),
+
+transparent 70%);
+
+bottom:-250px;
+
+left:-200px;
+
+pointer-events:none;
+
+}
+
+
+/* ===========================
+      SELEÇÃO DE TEXTO
+=========================== */
+
+::selection{
+
+background:#0a84ff;
+
+color:white;
+
+}
+        
