@@ -1,0 +1,1730 @@
+/* ==========================================================
+   PROJETO TI V5
+   STYLE.CSS
+   PARTE 1
+   Reset • Variáveis • Base • Scrollbar
+==========================================================*/
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'League Spartan',sans-serif;
+
+    background:
+    radial-gradient(circle at top,
+    #163b63 0%,
+    #0b2035 45%,
+    #050d17 100%);
+
+    color:#eef5ff;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+   VARIÁVEIS
+=========================== */
+
+:root{
+
+    --bg:#071826;
+
+    --bg2:#102942;
+
+    --bg3:#163b63;
+
+    --card:#15314d;
+
+    --primary:#0A84FF;
+
+    --secondary:#67D8FF;
+
+    --text:#F4F8FF;
+
+    --text2:#C8DCEC;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:
+    0 25px 55px rgba(0,0,0,.35);
+
+    --radius:26px;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:min(1250px,92%);
+
+    margin:auto;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:11px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        var(--primary),
+        #46c9ff
+    );
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#67d8ff;
+
+}
+
+/* ===========================
+   SELEÇÃO
+=========================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ===========================
+   ANIMAÇÕES BASE
+=========================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes flutuar{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   UTILIDADES
+=========================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+
+.oculto{
+
+    display:none;
+
+}
+/* ==========================================================
+   PROJETO TI V5
+   STYLE.CSS
+   PARTE 2
+   Header Apple • Logo • Menu
+==========================================================*/
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header-apple{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(1300px,94%);
+
+    height:88px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 28px;
+
+    background:rgba(8,22,35,.70);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.35);
+
+    z-index:99999;
+
+    transition:.35s;
+
+}
+
+.header-apple:hover{
+
+    background:rgba(10,28,45,.82);
+
+}
+
+/* ===========================
+   LOGO FIRJAN
+=========================== */
+
+.logo-firjan{
+
+    width:145px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+    animation:flutuar 5s ease-in-out infinite;
+
+}
+
+.logo-firjan:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   TÍTULO
+=========================== */
+
+.header-center{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:0 25px;
+
+}
+
+.header-center h1{
+
+    color:white;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+}
+
+.header-center p{
+
+    margin-top:8px;
+
+    color:var(--text2);
+
+    font-size:.95rem;
+
+}
+
+/* ===========================
+   BOTÃO MENU
+=========================== */
+
+.menu-btn{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #45c7ff
+    );
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 25px rgba(10,132,255,.35);
+
+}
+
+.menu-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 35px rgba(10,132,255,.45);
+
+}
+
+/* ===========================
+   MENU LATERAL
+=========================== */
+
+.menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-360px;
+
+    width:340px;
+
+    max-width:90vw;
+
+    height:100vh;
+
+    padding:35px;
+
+    overflow-y:auto;
+
+    background:#081725;
+
+    box-shadow:-15px 0 40px rgba(0,0,0,.45);
+
+    transition:right .35s ease;
+
+    z-index:99998;
+
+}
+
+.menu.ativo{
+
+    right:0;
+
+}
+
+.fechar-menu{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    font-size:34px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.fechar-menu:hover{
+
+    color:var(--secondary);
+
+    transform:rotate(90deg);
+
+}
+
+.menu h2{
+
+    color:var(--secondary);
+
+    margin:28px 0 18px;
+
+}
+
+.menu hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin:25px 0;
+
+}
+
+.menu-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.menu-links a,
+
+.menu-link-btn{
+
+    display:block;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #39b8ff
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.menu-links a:hover,
+
+.menu-link-btn:hover{
+
+    transform:translateX(6px);
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+.header-apple{
+
+    width:96%;
+
+    height:auto;
+
+    padding:18px;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.logo-firjan{
+
+    width:120px;
+
+}
+
+.header-center h1{
+
+    font-size:1.5rem;
+
+}
+
+.header-center p{
+
+    font-size:.9rem;
+
+}
+
+}
+/* ==========================================================
+   PROJETO TI V5
+   STYLE.CSS
+   PARTE 3
+   HERO • BOTÕES • BADGE
+==========================================================*/
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    padding:150px 8% 100px;
+
+    background:
+        linear-gradient(
+            rgba(4,16,28,.82),
+            rgba(4,16,28,.90)
+        ),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=2000");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+/* ===========================
+   EFEITOS DE LUZ
+=========================== */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    right:-220px;
+
+    top:-220px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(10,132,255,.22),
+
+        transparent 70%
+
+    );
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    left:-150px;
+
+    bottom:-150px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(103,216,255,.18),
+
+        transparent 70%
+
+    );
+
+}
+
+/* ===========================
+   CONTEÚDO
+=========================== */
+
+.hero-conteudo{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:950px;
+
+    animation:aparecer .8s ease;
+
+}
+
+/* ===========================
+   BADGE
+=========================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    margin-bottom:30px;
+
+    border-radius:50px;
+
+    background:rgba(10,132,255,.18);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#74dcff;
+
+    font-weight:700;
+
+    backdrop-filter:blur(15px);
+
+}
+
+/* ===========================
+   TÍTULO
+=========================== */
+
+.hero h2{
+
+    font-size:4rem;
+
+    color:white;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+}
+
+.hero p{
+
+    max-width:820px;
+
+    margin:auto;
+
+    color:var(--text2);
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.hero-botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    margin-top:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-botoes a{
+
+    min-width:240px;
+
+    padding:18px 32px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    transition:.35s;
+
+}
+
+/* Botão Principal */
+
+.btn-principal{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        #48cbff
+
+    );
+
+    color:white;
+
+    box-shadow:
+
+    0 15px 35px rgba(10,132,255,.35);
+
+}
+
+/* Botões Secundários */
+
+.btn-secundario{
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,255,255,.15);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+}
+
+/* Hover */
+
+.hero-botoes a:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.btn-principal:hover{
+
+    box-shadow:
+
+    0 20px 45px rgba(10,132,255,.45);
+
+}
+
+.btn-secundario:hover{
+
+    background:rgba(255,255,255,.14);
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+.hero{
+
+    padding:140px 30px 80px;
+
+    background-attachment:scroll;
+
+}
+
+.hero h2{
+
+    font-size:2.7rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+
+}
+
+.hero-botoes{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero-botoes a{
+
+    width:100%;
+
+    max-width:350px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+
+    min-height:85vh;
+
+}
+
+.hero h2{
+
+    font-size:2rem;
+
+}
+
+.hero p{
+
+    font-size:.95rem;
+
+}
+
+.badge{
+
+    font-size:.9rem;
+
+}
+
+}
+/* ==========================================================
+   PROJETO TI V5
+   STYLE.CSS
+   PARTE 4
+   SEÇÕES • CARDS • BANNERS
+==========================================================*/
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+.secao{
+
+    width:min(1250px,92%);
+
+    margin:90px auto;
+
+    padding:60px;
+
+    border-radius:32px;
+
+    background:rgba(16,41,66,.78);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:var(--shadow);
+
+    animation:aparecer .8s ease;
+
+}
+
+.secao h2{
+
+    text-align:center;
+
+    font-size:2.6rem;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.secao h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:5px;
+
+    margin:18px auto 0;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+.texto-centro{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    line-height:1.9;
+
+    color:var(--text2);
+
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    margin-top:45px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        180deg,
+        rgba(22,59,99,.95),
+        rgba(9,24,39,.96)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.35);
+
+}
+
+/* brilho */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.12),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.card:hover::before{
+
+    left:150%;
+
+}
+
+.card:hover{
+
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+    0 30px 55px rgba(10,132,255,.25);
+
+}
+
+/* ===========================
+   IMAGEM
+=========================== */
+
+.card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   CONTEÚDO
+=========================== */
+
+.card-conteudo{
+
+    padding:30px;
+
+}
+
+.card-conteudo h3{
+
+    color:var(--secondary);
+
+    margin-bottom:15px;
+
+    font-size:1.5rem;
+
+}
+
+.card-conteudo p{
+
+    color:var(--text2);
+
+    line-height:1.8;
+
+}
+
+.card-conteudo ul{
+
+    margin-top:20px;
+
+    padding-left:22px;
+
+    line-height:2;
+
+}
+
+/* ===========================
+   ÍCONES
+=========================== */
+
+.card-icone{
+
+    width:90px;
+
+    height:90px;
+
+    margin:35px auto 10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:52px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.banner{
+
+    width:min(1250px,92%);
+
+    margin:90px auto;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.banner img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.7s;
+
+}
+
+.banner:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+.secao{
+
+    padding:40px;
+
+}
+
+.secao h2{
+
+    font-size:2rem;
+
+}
+
+.cards-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.secao{
+
+    padding:28px;
+
+    margin:45px auto;
+
+}
+
+.card img{
+
+    height:200px;
+
+}
+
+.card-conteudo{
+
+    padding:22px;
+
+}
+
+}
+/* ==========================================================
+   PROJETO TI V5
+   STYLE.CSS
+   PARTE 5
+   ÁREAS • CARDS DE TI • BOTÕES
+==========================================================*/
+
+/* ===========================
+   GRID DAS ÁREAS
+=========================== */
+
+.areas-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+/* ===========================
+   CARD DAS ÁREAS
+=========================== */
+
+.area-card{
+
+    background:rgba(18,44,68,.82);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.area-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 45px rgba(10,132,255,.25);
+
+}
+
+.area-icone{
+
+    width:85px;
+
+    height:85px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:45px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+.area-card h3{
+
+    text-align:center;
+
+    color:var(--secondary);
+
+    margin-bottom:18px;
+
+    font-size:1.5rem;
+
+}
+
+.area-card p{
+
+    color:var(--text2);
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   SALÁRIO
+=========================== */
+
+.salario{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+    color:#7fffd4;
+
+}
+
+/* ===========================
+   BOTÃO DO CARD
+=========================== */
+
+.btn-card{
+
+    display:block;
+
+    margin:30px auto 0;
+
+    width:220px;
+
+    text-align:center;
+
+    padding:15px;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #4acbff
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-card:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 15px 35px rgba(10,132,255,.35);
+
+}
+
+/* ===========================
+   DESTAQUE
+=========================== */
+
+.destaque{
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+    .areas-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ==========================================================
+   PROJETO TI V5
+   STYLE.CSS
+   PARTE 6
+   PODCAST • CANVA • FOOTER • VOLTAR AO TOPO
+==========================================================*/
+
+/* ===========================
+   PODCAST
+=========================== */
+
+.podcast{
+
+    width:min(1250px,92%);
+
+    margin:90px auto;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    background:rgba(16,41,66,.82);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:var(--shadow);
+
+}
+
+.podcast h2{
+
+    text-align:center;
+
+    color:var(--secondary);
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+
+}
+
+.podcast p{
+
+    max-width:850px;
+
+    margin:0 auto 40px;
+
+    text-align:center;
+
+    color:var(--text2);
+
+    line-height:1.8;
+
+}
+
+.podcast iframe{
+
+    width:100%;
+
+    height:520px;
+
+    border:none;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+   CANVA
+=========================== */
+
+.canva{
+
+    width:min(1250px,92%);
+
+    margin:90px auto;
+
+}
+
+.canva iframe{
+
+    width:100%;
+
+    height:700px;
+
+    border:none;
+
+    border-radius:24px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */
+
+footer{
+
+    margin-top:100px;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:#06111d;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h3{
+
+    color:var(--secondary);
+
+    margin-bottom:12px;
+
+    font-size:1.6rem;
+
+}
+
+footer p{
+
+    color:var(--text2);
+
+    line-height:1.8;
+
+}
+
+.footer-links{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+    padding:12px 22px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    background:var(--primary);
+
+}
+
+/* ===========================
+   BOTÃO VOLTAR AO TOPO
+=========================== */
+
+.topo{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(10,132,255,.35);
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+.topo:hover{
+
+    transform:translateY(-5px) scale(1.08);
+
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s;
+
+}
+
+.fade.ativo{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+.podcast{
+
+    padding:35px;
+
+}
+
+.podcast iframe{
+
+    height:320px;
+
+}
+
+.canva iframe{
+
+    height:420px;
+
+}
+
+.topo{
+
+    width:52px;
+
+    height:52px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+footer{
+
+    padding:40px 20px;
+
+}
+
+.footer-links{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+}
