@@ -135,11 +135,16 @@ body{
 
 }
 
-.logo-firjan{
-
+.logo{
     width:140px;
-
+    height:auto;
     display:block;
+    transition:.3s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+}
 
 }
 
