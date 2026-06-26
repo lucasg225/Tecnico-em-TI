@@ -1,66 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Técnico em Tecnologia da Informação | Mercado de Trabalho</title>
-
-    <meta name="description"
-        content="Conheça o mercado de trabalho do Técnico em Tecnologia da Informação, salários, áreas de atuação, tecnologias e oportunidades profissionais.">
-
-    <meta name="keywords"
-        content="TI, Técnico em TI, Tecnologia da Informação, Desenvolvimento de Sistemas, Redes, Segurança da Informação">
-
-    <meta name="robots" content="index,follow">
-
-    <link rel="canonical"
-        href="https://lucasg225.github.io/Tecnico-em-TI/">
-
-    <!-- Favicon -->
-
-    <link rel="icon" href="logosite.png">
-    <link rel="shortcut icon" href="logosite.png">
-    <link rel="apple-touch-icon" href="logosite.png">
-
-    <meta name="theme-color" content="#0a84ff">
-
-    <!-- Open Graph -->
-
-    <meta property="og:title"
-        content="Técnico em Tecnologia da Informação">
-
-    <meta property="og:description"
-        content="Mercado de trabalho, salários e áreas da Tecnologia da Informação.">
-
-    <meta property="og:image"
-        content="https://lucasg225.github.io/Tecnico-em-TI/logosite.png">
-
-    <meta property="og:type"
-        content="website">
-
-    <meta property="og:url"
-        content="https://lucasg225.github.io/Tecnico-em-TI/">
-
-    <!-- Fonte -->
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
 <body id="inicio">
 
-<!-- ======================================
+<!-- ==========================================
 HEADER
-====================================== -->
+========================================== -->
 
 <header>
 
@@ -73,25 +15,25 @@ HEADER
 
         <h1>Técnico em Tecnologia da Informação</h1>
 
-    </div>
-
-    <div class="topo-direita">
-
-        <button
-            class="menu-btn"
-            onclick="abrirMenu()">
-
-            ☰
-
-        </button>
+        <p>
+            Mercado de Trabalho • Salários • Áreas de Atuação
+        </p>
 
     </div>
+
+    <button
+        class="menu-btn"
+        onclick="abrirMenu()">
+
+        ☰
+
+    </button>
 
 </header>
 
-<!-- ======================================
-MENU
-====================================== -->
+<!-- ==========================================
+MENU LATERAL
+========================================== -->
 
 <div id="menu" class="menu">
 
@@ -107,9 +49,13 @@ MENU
 
     <div class="config-item">
 
-        <label>Tamanho da Fonte</label>
+        <label for="fonte">
+            Tamanho da Fonte
+        </label>
 
-        <select onchange="alterarFonte(this.value)">
+        <select
+            id="fonte"
+            onchange="alterarFonte(this.value)">
 
             <option value="14">Pequena</option>
             <option value="16" selected>Média</option>
@@ -121,23 +67,35 @@ MENU
 
     <hr>
 
-    <h2>Documentos</h2>
+    <h2>Materiais</h2>
 
-<div class="atalhos-home">
+    <div class="menu-links">
 
-    <a href="#areas" class="btn-principal">
-        📚 Explorar Áreas
-    </a>
+        <button
+            class="menu-link-btn"
+            onclick="abrirPopupAreas()">
 
-    <a href="componentes.html" class="btn-secundario">
-        🖥 Componentes
-    </a>
+            📚 Explicação das Áreas
 
-    <a href="#podcast" class="btn-secundario">
-        🎙 Podcast
-    </a>
+        </button>
 
-</div>
+        <button
+            class="menu-link-btn"
+            onclick="abrirPopupDocs()">
+
+            📄 Documentos
+
+        </button>
+
+        <a
+            class="menu-link-btn"
+            href="componentes.html">
+
+            🖥 Componentes
+
+        </a>
+
+    </div>
 
     <hr>
 
@@ -145,10 +103,10 @@ MENU
 
     <div class="integrantes">
 
-        <p>Lucas Gabriel de Oliveira Jardim da Silva</p>
         <p>Bernardo Oliveira Martins</p>
         <p>Pedro Almeida Gonçalves Couto</p>
-        <p>Ana Beatriz Botelho Lacerda da Silva</p>
+        <p>Ana Beatriz Botelho</p>
+        <p>Lucas Gabriel de Oliveira Jardim da Silva</p>
         <p>Ana Lara Pinho Florenço</p>
 
     </div>
@@ -162,43 +120,46 @@ MENU
         <p>GetGuru</p>
         <p>Notícias Concursos</p>
         <p>Mosten</p>
-        <p>corsair</p>
+        <p>Corsai</p>
 
     </div>
 
 </div>
-<!-- ======================================
+<!-- ==========================================
 HERO
-====================================== -->
+========================================== -->
 
 <section class="hero">
 
-    <div class="hero-texto">
+    <div class="hero-conteudo">
+
+        <span class="badge">
+            🚀 Tecnologia • Inovação • Futuro
+        </span>
 
         <h2>
-            O futuro da tecnologia começa aqui.
+            Descubra o universo da
+            Tecnologia da Informação
         </h2>
 
         <p>
-
-            A Tecnologia da Informação está entre as áreas que mais crescem no
-            mundo. Empresas de todos os setores procuram profissionais capazes
-            de desenvolver sistemas, proteger dados, administrar redes e criar
-            soluções inovadoras para transformar a sociedade.
-
+            A área de Tecnologia da Informação está entre as profissões
+            que mais crescem no Brasil e no mundo. Conheça as principais
+            áreas de atuação, salários, oportunidades e descubra como um
+            Técnico em TI pode construir uma carreira de sucesso.
         </p>
 
         <div class="hero-botoes">
 
-            <a href="#areas">
+            <a href="#areas" class="btn-principal">
                 📚 Explorar Áreas
             </a>
 
-            <a href="componentes.html">
+            <a href="componentes.html" class="btn-secundario">
                 🖥 Componentes
             </a>
 
-            <a href="#podcast">
+            <a href="#podcast" class="btn-secundario">
                 🎙 Podcast
             </a>
 
@@ -208,51 +169,43 @@ HERO
 
 </section>
 
-<!-- ======================================
-ÁREAS
-====================================== -->
+<!-- ==========================================
+O QUE É T.I.
+========================================== -->
 
-<section id="areas" class="secao">
+<section class="secao">
 
     <h2>O que faz um Técnico em Tecnologia da Informação?</h2>
 
-    <p>
+    <p class="texto-centro">
 
-        O Técnico em Tecnologia da Informação é o profissional responsável por
-        instalar, configurar e manter computadores, servidores, redes e sistemas,
-        garantindo que toda a infraestrutura tecnológica funcione corretamente.
+        O Técnico em Tecnologia da Informação é responsável por instalar,
+        configurar e manter computadores, redes, servidores e sistemas.
+        Também presta suporte aos usuários, identifica falhas e garante
+        o funcionamento da infraestrutura tecnológica das empresas.
 
-    </p>
+        <br><br>
 
-    <br>
-
-    <p>
-
-        Além do suporte técnico, esse profissional pode atuar com desenvolvimento
-        de software, segurança da informação, computação em nuvem, banco de dados,
-        infraestrutura, inteligência artificial e automação.
-
-    </p>
-
-    <br>
-
-    <p>
-
-        Com a transformação digital das empresas, a procura por profissionais
-        qualificados cresce a cada ano, tornando a área uma das mais promissoras
-        do mercado de trabalho.
+        Além disso, pode atuar em desenvolvimento de software,
+        segurança da informação, computação em nuvem,
+        inteligência artificial, banco de dados e diversas
+        outras áreas da tecnologia.
 
     </p>
 
 </section>
-
-<!-- ======================================
-CARDS DAS ÁREAS
-====================================== -->
+<!-- ==========================================
+ÁREAS DE ATUAÇÃO
+========================================== -->
 
 <section class="secao" id="areas">
 
     <h2>Principais Áreas da Tecnologia da Informação</h2>
+
+    <p class="texto-centro">
+        O profissional de TI pode atuar em diversos segmentos da tecnologia.
+        Conheça algumas das áreas mais promissoras do mercado.
+    </p>
 
     <div class="cards-ti">
 
@@ -260,13 +213,11 @@ CARDS DAS ÁREAS
 
             <span>💻</span>
 
-            <h3>Desenvolvimento</h3>
+            <h3>Desenvolvimento de Software</h3>
 
             <p>
-
-                Criação de sistemas, sites, aplicativos e softwares utilizando
-                linguagens de programação modernas.
-
+                Criação de sites, aplicativos, sistemas e softwares para empresas,
+                organizações e usuários finais.
             </p>
 
         </div>
@@ -278,10 +229,8 @@ CARDS DAS ÁREAS
             <h3>Segurança da Informação</h3>
 
             <p>
-
-                Proteção de redes, sistemas e dados contra ataques virtuais,
-                invasões e vazamentos.
-
+                Proteção de dados, servidores e redes contra ataques virtuais,
+                invasões e vazamento de informações.
             </p>
 
         </div>
@@ -293,10 +242,8 @@ CARDS DAS ÁREAS
             <h3>Computação em Nuvem</h3>
 
             <p>
-
-                Administração de servidores, serviços online e plataformas como
-                AWS, Azure e Google Cloud.
-
+                Administração de serviços online utilizando plataformas como
+                AWS, Microsoft Azure e Google Cloud.
             </p>
 
         </div>
@@ -305,13 +252,11 @@ CARDS DAS ÁREAS
 
             <span>🌐</span>
 
-            <h3>Redes</h3>
+            <h3>Redes de Computadores</h3>
 
             <p>
-
-                Configuração e manutenção da comunicação entre computadores,
-                switches, roteadores e servidores.
-
+                Instalação, configuração e manutenção de redes locais,
+                servidores, roteadores e infraestrutura corporativa.
             </p>
 
         </div>
@@ -323,10 +268,8 @@ CARDS DAS ÁREAS
             <h3>Inteligência Artificial</h3>
 
             <p>
-
                 Desenvolvimento de soluções inteligentes utilizando Machine
-                Learning, Deep Learning e análise de dados.
-
+                Learning, automação e análise de grandes volumes de dados.
             </p>
 
         </div>
@@ -338,10 +281,8 @@ CARDS DAS ÁREAS
             <h3>Suporte Técnico</h3>
 
             <p>
-
-                Atendimento aos usuários, manutenção de equipamentos e resolução
-                de problemas tecnológicos.
-
+                Atendimento aos usuários, manutenção de computadores,
+                instalação de sistemas e resolução de problemas técnicos.
             </p>
 
         </div>
@@ -350,9 +291,9 @@ CARDS DAS ÁREAS
 
 </section>
 
-<!-- ======================================
-BANNER
-====================================== -->
+<!-- ==========================================
+IMAGEM
+========================================== -->
 
 <section class="banner">
 
@@ -362,30 +303,44 @@ BANNER
         loading="lazy">
 
 </section>
-<!-- ======================================
+
+<!-- ==========================================
 MERCADO DE TRABALHO
-====================================== -->
+========================================== -->
 
 <section class="secao">
 
     <h2>Mercado de Trabalho</h2>
 
-    <p>
+    <p class="texto-centro">
 
-        A Tecnologia da Informação é uma das áreas que mais crescem no Brasil e
-        no mundo. Empresas de praticamente todos os segmentos dependem de
-        profissionais especializados para desenvolver sistemas, proteger dados,
-        administrar servidores e manter suas operações funcionando.
+        A Tecnologia da Informação está entre os setores que mais crescem
+        no Brasil e no mundo. Empresas de todos os segmentos buscam
+        profissionais qualificados para atuar com desenvolvimento,
+        infraestrutura, segurança, banco de dados e suporte técnico.
+
+        <br><br>
+
+        A área oferece salários competitivos, possibilidade de trabalho
+        remoto e inúmeras oportunidades de crescimento profissional.
 
     </p>
 
-    <br>
+</section>
+<!-- ==========================================
+VAGAS EM T.I.
+========================================== -->
 
-    <p>
+<section class="secao">
 
-        O mercado oferece oportunidades para profissionais iniciantes e
-        experientes, com possibilidade de crescimento rápido, trabalho remoto e
-        salários competitivos.
+    <h2>Vagas para Técnicos em Tecnologia da Informação</h2>
+
+    <p class="texto-centro">
+
+        A demanda por profissionais de Tecnologia da Informação cresce todos
+        os anos. Empresas dos setores financeiro, industrial, educacional,
+        governamental e tecnológico procuram especialistas para atuar em
+        suporte, infraestrutura, redes e segurança.
 
     </p>
 
@@ -402,9 +357,9 @@ MERCADO DE TRABALHO
 
 </section>
 
-<!-- ======================================
-BANNER
-====================================== -->
+<!-- ==========================================
+SEGUNDA IMAGEM
+========================================== -->
 
 <section class="banner">
 
@@ -415,28 +370,19 @@ BANNER
 
 </section>
 
-<!-- ======================================
+<!-- ==========================================
 ÁREAS MAIS PROCURADAS
-====================================== -->
+========================================== -->
 
 <section class="secao">
 
     <h2>Áreas Mais Procuradas</h2>
 
-    <p>
+    <p class="texto-centro">
 
-        O avanço da tecnologia criou novas profissões e aumentou a procura por
-        especialistas em desenvolvimento de software, segurança da informação,
-        inteligência artificial, computação em nuvem e análise de dados.
-
-    </p>
-
-    <br>
-
-    <p>
-
-        Essas áreas apresentam excelentes perspectivas de crescimento e salários
-        acima da média do mercado.
+        Entre as áreas mais valorizadas atualmente estão Desenvolvimento
+        de Software, Segurança da Informação, Inteligência Artificial,
+        Computação em Nuvem, Ciência de Dados e Redes de Computadores.
 
     </p>
 
@@ -453,9 +399,9 @@ BANNER
 
 </section>
 
-<!-- ======================================
-POR QUE ESCOLHER TI
-====================================== -->
+<!-- ==========================================
+BENEFÍCIOS
+========================================== -->
 
 <section class="secao">
 
@@ -463,45 +409,36 @@ POR QUE ESCOLHER TI
 
     <ul>
 
-        <li>💼 Grande quantidade de vagas disponíveis.</li>
+        <li>✔ Alta demanda por profissionais.</li>
 
-        <li>📈 Crescimento profissional acelerado.</li>
+        <li>✔ Salários competitivos.</li>
 
-        <li>🌎 Possibilidade de trabalho remoto.</li>
+        <li>✔ Possibilidade de trabalho remoto.</li>
 
-        <li>💰 Salários competitivos.</li>
+        <li>✔ Crescimento profissional constante.</li>
 
-        <li>🚀 Contato constante com novas tecnologias.</li>
+        <li>✔ Contato diário com novas tecnologias.</li>
 
-        <li>🏢 Atuação em empresas de qualquer segmento.</li>
-
-        <li>🧠 Desenvolvimento contínuo de novas habilidades.</li>
+        <li>✔ Oportunidades nacionais e internacionais.</li>
 
     </ul>
 
 </section>
-<!-- ======================================
+
+<!-- ==========================================
 PODCAST
-====================================== -->
+========================================== -->
 
 <section class="secao" id="podcast">
 
     <h2>Podcast sobre Tecnologia da Informação</h2>
 
-    <p>
-
-        Assista ao podcast e conheça um pouco mais sobre o mercado de TI,
-        oportunidades profissionais e as principais áreas da tecnologia.
-
-    </p>
-
     <div class="video-container">
 
         <iframe
             src="https://www.youtube.com/embed/AIOGYplVT7g"
-            title="Podcast Tecnologia da Informação"
+            title="Podcast sobre Tecnologia da Informação"
             loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
 
         </iframe>
@@ -510,9 +447,9 @@ PODCAST
 
 </section>
 
-<!-- ======================================
+<!-- ==========================================
 RODAPÉ
-====================================== -->
+========================================== -->
 
 <footer>
 
@@ -520,10 +457,12 @@ RODAPÉ
 
     <p>
 
-        Projeto desenvolvido para apresentação do Curso Técnico em
-        Desenvolvimento de Sistemas.
+        Projeto desenvolvido para apresentação sobre o mercado de trabalho
+        em Tecnologia da Informação, áreas de atuação, salários e oportunidades.
 
     </p>
+
+    <br>
 
     <p>
 
@@ -533,9 +472,9 @@ RODAPÉ
 
 </footer>
 
-<!-- ======================================
+<!-- ==========================================
 BOTÃO VOLTAR AO TOPO
-====================================== -->
+========================================== -->
 
 <a href="#inicio" id="topo">
 
@@ -543,153 +482,14 @@ BOTÃO VOLTAR AO TOPO
 
 </a>
 
-<!-- ======================================
-POPUP ÁREAS
-====================================== -->
+<!-- ==========================================
+POPUPS
+========================================== -->
 
-<div id="popupAreas" class="popup-overlay">
-
-    <div class="popup-box">
-
-        <span class="fechar-popup"
-            onclick="fecharPopupAreas()">
-
-            ✕
-
-        </span>
-
-        <h2>Áreas da Tecnologia da Informação</h2>
-
-        <div class="popup-scroll">
-
-            <h3>💻 Desenvolvimento de Software</h3>
-
-            <p>
-                Criação de sistemas, aplicativos, sites e softwares utilizando
-                linguagens como Java, Python, JavaScript e C#.
-            </p>
-
-            <hr>
-
-            <h3>🔒 Segurança da Informação</h3>
-
-            <p>
-                Proteção de dados, servidores e redes contra ataques,
-                invasões e vazamentos.
-            </p>
-
-            <hr>
-
-            <h3>🤖 Inteligência Artificial</h3>
-
-            <p>
-                Desenvolvimento de soluções inteligentes utilizando
-                Machine Learning e Ciência de Dados.
-            </p>
-
-            <hr>
-
-            <h3>☁️ Computação em Nuvem</h3>
-
-            <p>
-                Administração de servidores, bancos de dados e serviços
-                hospedados na internet.
-            </p>
-
-            <hr>
-
-            <h3>🌐 Redes de Computadores</h3>
-
-            <p>
-                Configuração de roteadores, switches, cabeamento e
-                infraestrutura de comunicação.
-            </p>
-
-            <hr>
-
-            <h3>🛠 Suporte Técnico</h3>
-
-            <p>
-                Atendimento aos usuários, manutenção preventiva e corretiva,
-                instalação de equipamentos e resolução de problemas.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- ======================================
-POPUP DOCUMENTOS
-====================================== -->
-
-<div id="popupDocs" class="popup-overlay">
-
-    <div class="popup-box">
-
-        <span class="fechar-popup"
-            onclick="fecharPopupDocs()">
-
-            ✕
-
-        </span>
-
-        <h2>Documentação</h2>
-
-        <div class="popup-scroll">
-
-            <h3>Equipe</h3>
-
-            <p>
-
-                • Lucas Gabriel de Oliveira Jardim da Silva<br>
-                • Bernardo Oliveira Martins<br>
-                • Pedro Almeida Gonçalves Couto<br>
-                • Ana Beatriz Botelho Lacerda da Silva<br>
-                • Ana Lara Pinho Florenço
-
-            </p>
-
-            <hr>
-
-            <h3>Orientação</h3>
-
-            <p>
-
-                Filipe Mello Massi
-
-            </p>
-
-            <hr>
-
-            <h3>Curso</h3>
-
-            <p>
-
-                Técnico em Desenvolvimento de Sistemas
-
-            </p>
-
-            <hr>
-
-            <h3>Objetivo</h3>
-
-            <p>
-
-                Apresentar o mercado de trabalho do Técnico em Tecnologia
-                da Informação, suas principais áreas de atuação e as
-                oportunidades existentes atualmente.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- JavaScript -->
+<!-- Cole aqui os dois popups:
+     popupAreas
+     popupDocs
+     (podem permanecer exatamente iguais aos que você já tinha.) -->
 
 <script src="back.js"></script>
 
