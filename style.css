@@ -628,3 +628,34 @@ display:none;
 }
 
 }
+.atalhos-home{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+padding:20px;
+
+background:#10263d;
+
+}
+
+.atalhos-home a{
+
+background:#0a84ff;
+
+color:white;
+
+padding:12px 20px;
+
+border-radius:25px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
