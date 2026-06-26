@@ -93,113 +93,112 @@ body{
    HEADER
 =========================== */
 
-header{
+.header-apple{
 
-    position:sticky;
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
 
-    top:0;
+    width:min(1300px,94%);
 
-    z-index:9999;
+    height:82px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
-    padding:18px 35px;
+    padding:0 30px;
 
-    background:rgba(7,24,38,.88);
+    background:rgba(12,20,30,.55);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(24px);
 
-    border-bottom:1px solid var(--border);
+    -webkit-backdrop-filter:blur(24px);
 
-}
+    border:1px solid rgba(255,255,255,.08);
 
-/* LOGO */
+    border-radius:24px;
 
-.logo{
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
 
-    width:150px;
+    z-index:99999;
 
     transition:.35s;
 
 }
 
-.logo:hover{
+.header-apple:hover{
 
-    transform:scale(1.05);
+    background:rgba(18,28,40,.70);
 
 }
 
-/* TÍTULO */
+.logo-firjan{
 
-.titulo-site{
+    width:140px;
 
-    flex:1;
+    display:block;
+
+}
+
+.header-center{
 
     text-align:center;
 
+    flex:1;
+
 }
 
-.titulo-site h1{
-
-    color:white;
+.header-center h1{
 
     font-size:2rem;
 
-    font-weight:800;
+    font-weight:700;
+
+    color:white;
 
     letter-spacing:.5px;
 
 }
 
-.titulo-site p{
+.header-center p{
 
     margin-top:8px;
 
-    color:var(--text2);
+    color:#8fb8d9;
 
-    font-size:1rem;
+    font-size:.95rem;
 
 }
 
-/* MENU */
-
 .menu-btn{
 
-    width:55px;
-
-    height:55px;
+    width:52px;
+    height:52px;
 
     border:none;
 
     border-radius:16px;
 
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        #39b8ff
-    );
+    background:rgba(255,255,255,.08);
 
     color:white;
 
-    font-size:28px;
+    font-size:26px;
 
     cursor:pointer;
 
-    transition:.35s;
-
-    box-shadow:
-
-    0 10px 25px rgba(0,132,255,.35);
+    transition:.3s;
 
 }
 
 .menu-btn:hover{
 
-    transform:translateY(-4px);
+    transform:scale(1.08);
+
+    background:#0A84FF;
 
 }
 
