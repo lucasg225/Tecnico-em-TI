@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto TI V5</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ==========================
+     HEADER
+========================== -->
+
+<header class="header-apple">
+
+    <img
+        src="firjan.png"
+        alt="Firjan SENAI"
+        class="logo-firjan">
+
+    <div class="header-center">
+
+        <h1>
+
+            Técnico em Tecnologia da Informação
+
+        </h1>
+
+        <p>
+
+            Projeto Integrador • Firjan SENAI
+
+        </p>
+
+    </div>
+
+    <button
+        class="menu-btn"
+        onclick="abrirMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+<!-- ==========================
+     MENU
+========================== -->
+
+<nav
+     id="menu"
+     class="menu">
+
+    <span
+          class="fechar-menu"
+          onclick="fecharMenu()">
+
+        ×
+
+    </span>
+
+    <h2>
+
+        Navegação
+
+    </h2>
+
+    <div class="menu-links">
+
+        <a href="#hero">
+
+            🏠 Início
+
+        </a>
+
+        <a href="#areas">
+
+            💻 Áreas da TI
+
+        </a>
+
+        <a href="componentes.html">
+
+            🖥 Componentes
+
+        </a>
+
+        <a href="#podcast">
+
+            🎙 Podcast
+
+        </a>
+
+        <a href="#apresentacao">
+
+            📊 Apresentação
+
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- ==========================
+     HERO
+========================== -->
+
+<section
+         class="hero"
+         id="hero">
+
+    <div
+         class="hero-conteudo">
+
+        <div class="badge">
+
+            🚀 Curso Técnico • Firjan SENAI
+
+        </div>
+
+        <h2>
+
+            Tecnologia que transforma o futuro.
+
+        </h2>
+
+        <p>
+
+            Conheça o curso Técnico em Tecnologia da Informação,
+            suas áreas de atuação, mercado de trabalho,
+            salários, principais componentes do computador
+            e muito mais.
+
+        </p>
+
+        <div class="hero-botoes">
+
+            <a
+               href="#areas"
+               class="btn-principal">
+
+               📚 Explorar Áreas
+
+            </a>
+
+            <a
+               href="componentes.html"
+               class="btn-secundario">
+
+               🖥 Componentes
+
+            </a>
+
+            <a
+               href="#podcast"
+               class="btn-secundario">
+
+               🎙 Podcast
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================
+     ÁREAS DA TI
+========================== -->
+
+<section
+    class="secao fade"
+    id="areas">
+
+    <h2>
+
+        Áreas da Tecnologia da Informação
+
+    </h2>
+
+    <p class="texto-centro">
+
+        O profissional de Tecnologia da Informação pode atuar em
+        diversas áreas. Conheça algumas das principais profissões,
+        suas funções e oportunidades no mercado.
+
+    </p>
+
+    <div class="areas-grid">
+
+        <article class="area-card">
+
+            <div class="area-icone">
+                💻
+            </div>
+
+            <h3>
+                Desenvolvimento de Software
+            </h3>
+
+            <p>
+
+                Criação de sistemas, aplicativos e sites utilizando
+                linguagens de programação modernas.
+
+            </p>
+
+            <div class="salario">
+
+                Média: R$ 4.500 a R$ 12.000
+
+            </div>
+
+        </article>
+
+        <article class="area-card">
+
+            <div class="area-icone">
+                🌐
+            </div>
+
+            <h3>
+
+                Redes de Computadores
+
+            </h3>
+
+            <p>
+
+                Configuração, manutenção e administração de redes,
+                servidores e infraestrutura corporativa.
+
+            </p>
+
+            <div class="salario">
+
+                Média: R$ 3.800 a R$ 9.000
+
+            </div>
+
+        </article>
+
+        <article class="area-card">
+
+            <div class="area-icone">
+                🔒
+            </div>
+
+            <h3>
+
+                Segurança da Informação
+
+            </h3>
+
+            <p>
+
+                Proteção de sistemas, dados e redes contra ataques
+                virtuais e vulnerabilidades.
+
+            </p>
+
+            <div class="salario">
+
+                Média: R$ 5.000 a R$ 15.000
+
+            </div>
+
+        </article>
+
+        <article class="area-card">
+
+            <div class="area-icone">
+                🗄️
+            </div>
+
+            <h3>
+
+                Banco de Dados
+
+            </h3>
+
+            <p>
+
+                Organização, administração e segurança dos bancos
+                de dados utilizados pelas empresas.
+
+            </p>
+
+            <div class="salario">
+
+                Média: R$ 4.500 a R$ 10.000
+
+            </div>
+
+        </article>
+
+        <article class="area-card">
+
+            <div class="area-icone">
+                ☁️
+            </div>
+
+            <h3>
+
+                Computação em Nuvem
+
+            </h3>
+
+            <p>
+
+                Desenvolvimento de soluções utilizando serviços como
+                Azure, AWS e Google Cloud.
+
+            </p>
+
+            <div class="salario">
+
+                Média: R$ 6.000 a R$ 18.000
+
+            </div>
+
+        </article>
+
+        <article class="area-card">
+
+            <div class="area-icone">
+                🤖
+            </div>
+
+            <h3>
+
+                Inteligência Artificial
+
+            </h3>
+
+            <p>
+
+                Desenvolvimento de soluções inteligentes utilizando
+                aprendizado de máquina e análise de dados.
+
+            </p>
+
+            <div class="salario">
+
+                Média: R$ 8.000 a R$ 20.000
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     MERCADO DE TRABALHO
+========================== -->
+
+<section class="secao fade">
+
+    <h2>
+
+        Mercado de Trabalho
+
+    </h2>
+
+    <p class="texto-centro">
+
+        A área de Tecnologia da Informação continua entre as que mais
+        crescem no Brasil e no mundo. Empresas de todos os setores
+        precisam de profissionais qualificados para desenvolver
+        sistemas, proteger informações, administrar redes e criar
+        soluções inovadoras.
+
+    </p>
+
+</section>
+<!-- ==========================
+     COMPONENTES
+========================== -->
+
+<section class="secao fade">
+
+    <h2>
+
+        Componentes do Computador
+
+    </h2>
+
+    <p class="texto-centro">
+
+        Conheça os principais componentes que fazem um computador
+        funcionar: processador, memória RAM, placa-mãe, placa de vídeo,
+        SSD, HD e fonte de alimentação.
+
+    </p>
+
+    <div class="hero-botoes">
+
+        <a
+            href="componentes.html"
+            class="btn-principal">
+
+            🖥 Explorar Componentes
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     PODCAST
+========================== -->
+
+<section
+    class="podcast fade"
+    id="podcast">
+
+    <h2>
+
+        Podcast
+
+    </h2>
+
+    <p>
+
+        Ouça nosso podcast sobre Tecnologia da Informação e descubra
+        curiosidades, tendências e oportunidades da profissão.
+
+    </p>
+
+    <!-- Substitua pelo link do seu podcast -->
+    <iframe
+        src=""
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+<!-- ==========================
+     APRESENTAÇÃO
+========================== -->
+
+<section
+    class="canva fade"
+    id="apresentacao">
+
+    <!-- Substitua pelo link do Canva -->
+    <iframe
+        src=""
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+<!-- ==========================
+     RODAPÉ
+========================== -->
+
+<footer>
+
+    <h3>
+
+        Projeto TI V5
+
+    </h3>
+
+    <p>
+
+        Projeto desenvolvido para apresentação do curso
+        Técnico em Tecnologia da Informação
+        — Firjan SENAI.
+
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#hero">
+
+            Início
+
+        </a>
+
+        <a href="#areas">
+
+            Áreas
+
+        </a>
+
+        <a href="componentes.html">
+
+            Componentes
+
+        </a>
+
+        <a href="#podcast">
+
+            Podcast
+
+        </a>
+
+    </div>
+
+</footer>
+
+<!-- ==========================
+     BOTÃO TOPO
+========================== -->
+
+<button
+    class="topo"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+    ↑
+
+</button>
+
+<script src="back.js"></script>
+
+</body>
+</html>
