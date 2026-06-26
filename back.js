@@ -1,9 +1,9 @@
 function abrirMenu() {
-    document.getElementById("menu").style.right = "0";
+    document.getElementById("menu").classList.add("ativo");
 }
 
 function fecharMenu() {
-    document.getElementById("menu").style.right = "-350px";
+    document.getElementById("menu").classList.remove("ativo");
 }
 
 function alterarFonte(valor) {
@@ -58,7 +58,7 @@ document.addEventListener("click", function(e){
         !menu.contains(e.target) &&
         !botao.contains(e.target)
     ){
-        menu.style.right = "-350px";
+        menu.classList.remove("ativo");
     }
 
 });
