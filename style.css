@@ -1,1730 +1,503 @@
-/* ==========================================================
-   PROJETO TI V5
-   STYLE.CSS
-   PARTE 1
-   Reset • Variáveis • Base • Scrollbar
-==========================================================*/
-
-/* ===========================
-   RESET
-=========================== */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-
-    scroll-behavior:smooth;
-
+    font-family: 'League Spartan', sans-serif;
 }
 
 body{
-
-    font-family:'League Spartan',sans-serif;
-
-    background:
-    radial-gradient(circle at top,
-    #163b63 0%,
-    #0b2035 45%,
-    #050d17 100%);
-
-    color:#eef5ff;
-
-    overflow-x:hidden;
-
-    min-height:100vh;
-
-}
-
-/* ===========================
-   VARIÁVEIS
-=========================== */
-
-:root{
-
-    --bg:#071826;
-
-    --bg2:#102942;
-
-    --bg3:#163b63;
-
-    --card:#15314d;
-
-    --primary:#0A84FF;
-
-    --secondary:#67D8FF;
-
-    --text:#F4F8FF;
-
-    --text2:#C8DCEC;
-
-    --border:rgba(255,255,255,.08);
-
-    --shadow:
-    0 25px 55px rgba(0,0,0,.35);
-
-    --radius:26px;
-
-}
-
-/* ===========================
-   LINKS
-=========================== */
-
-a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-}
-
-img{
-
-    max-width:100%;
-
-    display:block;
-
-}
-
-/* ===========================
-   CONTAINER
-=========================== */
-
-.container{
-
-    width:min(1250px,92%);
-
-    margin:auto;
-
-}
-
-/* ===========================
-   SCROLLBAR
-=========================== */
-
-::-webkit-scrollbar{
-
-    width:11px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:var(--bg);
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:linear-gradient(
-        var(--primary),
-        #46c9ff
-    );
-
-    border-radius:50px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#67d8ff;
-
-}
-
-/* ===========================
-   SELEÇÃO
-=========================== */
-
-::selection{
-
-    background:var(--primary);
-
+    background:#071826;
     color:white;
-
+    font-family: 'League Spartan', sans-serif;
 }
 
-/* ===========================
-   ANIMAÇÕES BASE
-=========================== */
+/* CABEÇALHO */
 
-@keyframes aparecer{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-@keyframes flutuar{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-8px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ===========================
-   UTILIDADES
-=========================== */
-
-.text-center{
-
-    text-align:center;
-
-}
-
-.mt-40{
-
-    margin-top:40px;
-
-}
-
-.mb-40{
-
-    margin-bottom:40px;
-
-}
-
-.oculto{
-
-    display:none;
-
-}
-/* ==========================================================
-   PROJETO TI V5
-   STYLE.CSS
-   PARTE 2
-   Header Apple • Logo • Menu
-==========================================================*/
-
-/* ===========================
-   HEADER
-=========================== */
-
-.header-apple{
-
-    position:fixed;
-
-    top:20px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:min(1300px,94%);
-
-    height:88px;
-
+header{
+    height:100px;
+    background:#0d2235;
     display:flex;
-
     align-items:center;
-
-    justify-content:space-between;
-
-    padding:0 28px;
-
-    background:rgba(8,22,35,.70);
-
-    backdrop-filter:blur(20px);
-
-    -webkit-backdrop-filter:blur(20px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:24px;
-
-    box-shadow:
-    0 20px 45px rgba(0,0,0,.35);
-
-    z-index:99999;
-
-    transition:.35s;
-
+    justify-content:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
 }
 
-.header-apple:hover{
-
-    background:rgba(10,28,45,.82);
-
-}
-
-/* ===========================
-   LOGO FIRJAN
-=========================== */
-
-.logo-firjan{
-
-    width:145px;
-
-    height:auto;
-
+/* LOGO RETANGULAR */
+.logo{
+    position:absolute;
+    left:20px;
+    width:140px;
+    height:60px;
     object-fit:contain;
-
-    transition:.35s;
-
-    animation:flutuar 5s ease-in-out infinite;
-
+    background:transparent;
 }
 
-.logo-firjan:hover{
-
-    transform:scale(1.05);
-
-}
-
-/* ===========================
-   TÍTULO
-=========================== */
-
-.header-center{
-
-    flex:1;
-
-    text-align:center;
-
-    padding:0 25px;
-
-}
-
-.header-center h1{
-
+header h1{
+    font-size:32px;
     color:white;
-
-    font-size:2rem;
-
-    font-weight:800;
-
-    letter-spacing:.5px;
-
+    font-family: 'League Spartan', sans-serif;
 }
-
-.header-center p{
-
-    margin-top:8px;
-
-    color:var(--text2);
-
-    font-size:.95rem;
-
-}
-
-/* ===========================
-   BOTÃO MENU
-=========================== */
 
 .menu-btn{
-
-    width:55px;
-
-    height:55px;
-
+    position:absolute;
+    right:20px;
+    background:none;
     border:none;
-
-    border-radius:18px;
-
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        #45c7ff
-    );
-
     color:white;
-
-    font-size:28px;
-
+    font-size:32px;
     cursor:pointer;
-
-    transition:.35s;
-
-    box-shadow:
-    0 10px 25px rgba(10,132,255,.35);
-
 }
 
-.menu-btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 18px 35px rgba(10,132,255,.45);
-
-}
-
-/* ===========================
-   MENU LATERAL
-=========================== */
+/* MENU */
 
 .menu{
-
     position:fixed;
-
     top:0;
-
-    right:-360px;
-
-    width:340px;
-
-    max-width:90vw;
-
-    height:100vh;
-
-    padding:35px;
-
+    right:-350px;
+    width:350px;
+    height:100%;
+    background:#102a42;
+    padding:30px;
+    transition:0.4s;
+    z-index:9999;
     overflow-y:auto;
-
-    background:#081725;
-
-    box-shadow:-15px 0 40px rgba(0,0,0,.45);
-
-    transition:right .35s ease;
-
-    z-index:99998;
-
-}
-
-.menu.ativo{
-
-    right:0;
-
+    box-shadow:-5px 0 20px rgba(0,0,0,0.5);
 }
 
 .fechar-menu{
-
-    position:absolute;
-
-    top:20px;
-
-    right:25px;
-
-    font-size:34px;
-
+    background:none;
+    border:none;
     color:white;
-
+    font-size:28px;
     cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.fechar-menu:hover{
-
-    color:var(--secondary);
-
-    transform:rotate(90deg);
-
+    float:right;
 }
 
 .menu h2{
-
-    color:var(--secondary);
-
-    margin:28px 0 18px;
-
+    margin-top:25px;
+    margin-bottom:15px;
+    color:#00cfff;
+    font-family: 'League Spartan', sans-serif;
 }
 
 .menu hr{
-
-    border:none;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
     margin:25px 0;
-
-}
-
-.menu-links{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-
-}
-
-.menu-links a,
-
-.menu-link-btn{
-
-    display:block;
-
-    padding:16px;
-
     border:none;
-
-    border-radius:16px;
-
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        #39b8ff
-    );
-
-    color:white;
-
-    font-weight:700;
-
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+    height:1px;
+    background:rgba(255,255,255,0.2);
 }
 
-.menu-links a:hover,
-
-.menu-link-btn:hover{
-
-    transform:translateX(6px);
-
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-.header-apple{
-
-    width:96%;
-
-    height:auto;
-
-    padding:18px;
-
+.config-item{
+    display:flex;
     flex-direction:column;
-
-    gap:18px;
-
+    gap:10px;
 }
 
-.logo-firjan{
-
-    width:120px;
-
+.config-item label{
+    color:white;
+    font-family: 'League Spartan', sans-serif;
 }
 
-.header-center h1{
-
-    font-size:1.5rem;
-
+.config-item select{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    font-family: 'League Spartan', sans-serif;
 }
 
-.header-center p{
-
-    font-size:.9rem;
-
+.integrantes p{
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    font-family: 'League Spartan', sans-serif;
 }
 
-}
-/* ==========================================================
-   PROJETO TI V5
-   STYLE.CSS
-   PARTE 3
-   HERO • BOTÕES • BADGE
-==========================================================*/
-
-/* ===========================
-   HERO
-=========================== */
+/* HERO COM FUNDO (ALTERADO) */
 
 .hero{
-
-    position:relative;
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+    padding:80px 10%;
     text-align:center;
 
-    overflow:hidden;
-
-    padding:150px 8% 100px;
-
     background:
-        linear-gradient(
-            rgba(4,16,28,.82),
-            rgba(4,16,28,.90)
-        ),
-        url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=2000");
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://i.pinimg.com/1200x/72/e7/c4/72e7c45fe83fec3e1bcb4b82f4fd118e.jpg");
 
     background-size:cover;
-
     background-position:center;
-
-    background-attachment:fixed;
-
-}
-
-/* ===========================
-   EFEITOS DE LUZ
-=========================== */
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-
-    height:700px;
-
-    right:-220px;
-
-    top:-220px;
-
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        rgba(10,132,255,.22),
-
-        transparent 70%
-
-    );
-
-}
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:520px;
-
-    height:520px;
-
-    left:-150px;
-
-    bottom:-150px;
-
-    background:
-
-    radial-gradient(
-
-        circle,
-
-        rgba(103,216,255,.18),
-
-        transparent 70%
-
-    );
-
-}
-
-/* ===========================
-   CONTEÚDO
-=========================== */
-
-.hero-conteudo{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:950px;
-
-    animation:aparecer .8s ease;
-
-}
-
-/* ===========================
-   BADGE
-=========================== */
-
-.badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:12px 24px;
-
-    margin-bottom:30px;
-
-    border-radius:50px;
-
-    background:rgba(10,132,255,.18);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    color:#74dcff;
-
-    font-weight:700;
-
-    backdrop-filter:blur(15px);
-
-}
-
-/* ===========================
-   TÍTULO
-=========================== */
-
-.hero h2{
-
-    font-size:4rem;
-
-    color:white;
-
-    line-height:1.1;
-
-    margin-bottom:25px;
-
-    font-weight:800;
-
-}
-
-.hero p{
-
-    max-width:820px;
-
-    margin:auto;
-
-    color:var(--text2);
-
-    font-size:1.15rem;
-
-    line-height:1.9;
-
-}
-
-/* ===========================
-   BOTÕES
-=========================== */
-
-.hero-botoes{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:22px;
-
-    margin-top:50px;
-
-    flex-wrap:wrap;
-
-}
-
-.hero-botoes a{
-
-    min-width:240px;
-
-    padding:18px 32px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    text-align:center;
-
-    font-weight:700;
-
-    font-size:1rem;
-
-    transition:.35s;
-
-}
-
-/* Botão Principal */
-
-.btn-principal{
-
-    background:
-
-    linear-gradient(
-
-        135deg,
-
-        var(--primary),
-
-        #48cbff
-
-    );
-
-    color:white;
-
-    box-shadow:
-
-    0 15px 35px rgba(10,132,255,.35);
-
-}
-
-/* Botões Secundários */
-
-.btn-secundario{
-
-    background:rgba(255,255,255,.08);
-
-    border:2px solid rgba(255,255,255,.15);
-
-    color:white;
-
-    backdrop-filter:blur(10px);
-
-}
-
-/* Hover */
-
-.hero-botoes a:hover{
-
-    transform:translateY(-6px);
-
-}
-
-.btn-principal:hover{
-
-    box-shadow:
-
-    0 20px 45px rgba(10,132,255,.45);
-
-}
-
-.btn-secundario:hover{
-
-    background:rgba(255,255,255,.14);
-
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-.hero{
-
-    padding:140px 30px 80px;
-
-    background-attachment:scroll;
-
+    background-repeat:no-repeat;
 }
 
 .hero h2{
-
-    font-size:2.7rem;
-
-}
-
-.hero p{
-
-    font-size:1rem;
-
-}
-
-.hero-botoes{
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-.hero-botoes a{
-
-    width:100%;
-
-    max-width:350px;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.hero{
-
-    min-height:85vh;
-
-}
-
-.hero h2{
-
-    font-size:2rem;
-
-}
-
-.hero p{
-
-    font-size:.95rem;
-
-}
-
-.badge{
-
-    font-size:.9rem;
-
-}
-
-}
-/* ==========================================================
-   PROJETO TI V5
-   STYLE.CSS
-   PARTE 4
-   SEÇÕES • CARDS • BANNERS
-==========================================================*/
-
-/* ===========================
-   SEÇÕES
-=========================== */
-
-.secao{
-
-    width:min(1250px,92%);
-
-    margin:90px auto;
-
-    padding:60px;
-
-    border-radius:32px;
-
-    background:rgba(16,41,66,.78);
-
-    backdrop-filter:blur(16px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:var(--shadow);
-
-    animation:aparecer .8s ease;
-
-}
-
-.secao h2{
-
-    text-align:center;
-
-    font-size:2.6rem;
-
-    color:var(--secondary);
-
+    font-size:42px;
     margin-bottom:20px;
-
+    color:#00cfff;
+    font-family: 'League Spartan', sans-serif;
 }
 
-.secao h2::after{
-
-    content:"";
-
-    display:block;
-
-    width:90px;
-
-    height:5px;
-
-    margin:18px auto 0;
-
-    border-radius:50px;
-
-    background:linear-gradient(
-        90deg,
-        var(--primary),
-        var(--secondary)
-    );
-
-}
-
-.texto-centro{
-
+.hero p{
     max-width:900px;
-
     margin:auto;
-
-    text-align:center;
-
-    line-height:1.9;
-
-    color:var(--text2);
-
-}
-
-/* ===========================
-   GRID
-=========================== */
-
-.cards-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
-    gap:35px;
-
-    margin-top:45px;
-
-}
-
-/* ===========================
-   CARD
-=========================== */
-
-.card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:28px;
-
-    background:linear-gradient(
-        180deg,
-        rgba(22,59,99,.95),
-        rgba(9,24,39,.96)
-    );
-
-    border:1px solid rgba(255,255,255,.08);
-
-    transition:.4s;
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.35);
-
-}
-
-/* brilho */
-
-.card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-120%;
-
-    width:70%;
-
-    height:100%;
-
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.12),
-
-        transparent
-
-    );
-
-    transition:.8s;
-
-}
-
-.card:hover::before{
-
-    left:150%;
-
-}
-
-.card:hover{
-
-    transform:
-    translateY(-12px);
-
-    box-shadow:
-    0 30px 55px rgba(10,132,255,.25);
-
-}
-
-/* ===========================
-   IMAGEM
-=========================== */
-
-.card img{
-
-    width:100%;
-
-    height:240px;
-
-    object-fit:cover;
-
-    transition:.6s;
-
-}
-
-.card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-/* ===========================
-   CONTEÚDO
-=========================== */
-
-.card-conteudo{
-
-    padding:30px;
-
-}
-
-.card-conteudo h3{
-
-    color:var(--secondary);
-
-    margin-bottom:15px;
-
-    font-size:1.5rem;
-
-}
-
-.card-conteudo p{
-
-    color:var(--text2);
-
+    font-size:18px;
     line-height:1.8;
-
+    font-family: 'League Spartan', sans-serif;
 }
 
-.card-conteudo ul{
-
-    margin-top:20px;
-
-    padding-left:22px;
-
-    line-height:2;
-
-}
-
-/* ===========================
-   ÍCONES
-=========================== */
-
-.card-icone{
-
-    width:90px;
-
-    height:90px;
-
-    margin:35px auto 10px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:52px;
-
-    border-radius:50%;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-
-    color:white;
-
-}
-
-/* ===========================
-   BANNER
-=========================== */
+/* BANNER */
 
 .banner{
-
-    width:min(1250px,92%);
-
-    margin:90px auto;
-
-    overflow:hidden;
-
-    border-radius:30px;
-
-    box-shadow:
-
-    0 20px 45px rgba(0,0,0,.35);
-
+    padding:40px;
+    text-align:center;
 }
 
 .banner img{
-
-    width:100%;
-
+    width:85%;
+    max-width:1000px;
+    border-radius:20px;
     display:block;
-
-    transition:.7s;
-
+    margin:auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
-.banner:hover img{
-
-    transform:scale(1.05);
-
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
+/* SEÇÕES */
 
 .secao{
-
-    padding:40px;
-
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    padding:30px;
+    background:#102a42;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
 .secao h2{
-
-    font-size:2rem;
-
-}
-
-.cards-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.secao{
-
-    padding:28px;
-
-    margin:45px auto;
-
-}
-
-.card img{
-
-    height:200px;
-
-}
-
-.card-conteudo{
-
-    padding:22px;
-
-}
-
-}
-/* ==========================================================
-   PROJETO TI V5
-   STYLE.CSS
-   PARTE 5
-   ÁREAS • CARDS DE TI • BOTÕES
-==========================================================*/
-
-/* ===========================
-   GRID DAS ÁREAS
-=========================== */
-
-.areas-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-    gap:35px;
-
-    margin-top:50px;
-
-}
-
-/* ===========================
-   CARD DAS ÁREAS
-=========================== */
-
-.area-card{
-
-    background:rgba(18,44,68,.82);
-
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:28px;
-
-    padding:35px;
-
-    transition:.35s;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-}
-
-.area-card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:0 25px 45px rgba(10,132,255,.25);
-
-}
-
-.area-icone{
-
-    width:85px;
-
-    height:85px;
-
-    margin:0 auto 20px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:45px;
-
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-
-}
-
-.area-card h3{
-
     text-align:center;
-
-    color:var(--secondary);
-
-    margin-bottom:18px;
-
-    font-size:1.5rem;
-
+    color:#00cfff;
+    margin-bottom:25px;
+    font-family: 'League Spartan', sans-serif;
 }
 
-.area-card p{
+/* GRÁFICOS CANVA */
 
-    color:var(--text2);
-
-    line-height:1.8;
-
-    text-align:center;
-
-}
-
-/* ===========================
-   SALÁRIO
-=========================== */
-
-.salario{
-
-    margin-top:25px;
-
-    text-align:center;
-
-    font-size:1.3rem;
-
-    font-weight:700;
-
-    color:#7fffd4;
-
-}
-
-/* ===========================
-   BOTÃO DO CARD
-=========================== */
-
-.btn-card{
-
-    display:block;
-
-    margin:30px auto 0;
-
-    width:220px;
-
-    text-align:center;
-
-    padding:15px;
-
-    border-radius:40px;
-
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        #4acbff
-    );
-
-    color:white;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-.btn-card:hover{
-
-    transform:scale(1.05);
-
-    box-shadow:0 15px 35px rgba(10,132,255,.35);
-
-}
-
-/* ===========================
-   DESTAQUE
-=========================== */
-
-.destaque{
-
-    color:var(--secondary);
-
-    font-weight:700;
-
-}
-
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-    .areas-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-/* ==========================================================
-   PROJETO TI V5
-   STYLE.CSS
-   PARTE 6
-   PODCAST • CANVA • FOOTER • VOLTAR AO TOPO
-==========================================================*/
-
-/* ===========================
-   PODCAST
-=========================== */
-
-.podcast{
-
-    width:min(1250px,92%);
-
-    margin:90px auto;
-
-    padding:60px;
-
-    border-radius:30px;
-
-    background:rgba(16,41,66,.82);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:var(--shadow);
-
-}
-
-.podcast h2{
-
-    text-align:center;
-
-    color:var(--secondary);
-
-    font-size:2.5rem;
-
-    margin-bottom:20px;
-
-}
-
-.podcast p{
-
-    max-width:850px;
-
-    margin:0 auto 40px;
-
-    text-align:center;
-
-    color:var(--text2);
-
-    line-height:1.8;
-
-}
-
-.podcast iframe{
-
+.grafico-canva{
     width:100%;
-
-    height:520px;
-
-    border:none;
-
-    border-radius:22px;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
-
+    max-width:1100px;
+    margin:auto;
 }
 
-/* ===========================
-   CANVA
-=========================== */
-
-.canva{
-
-    width:min(1250px,92%);
-
-    margin:90px auto;
-
-}
-
-.canva iframe{
-
+.grafico-canva iframe{
     width:100%;
-
     height:700px;
-
     border:none;
-
-    border-radius:24px;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
-
+    border-radius:20px;
+    display:block;
+    background:white;
 }
 
-/* ===========================
-   RODAPÉ
-=========================== */
+/* RODAPÉ */
 
 footer{
-
-    margin-top:100px;
-
-    padding:50px 20px;
-
+    background:#0d2235;
     text-align:center;
-
-    background:#06111d;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
+    padding:40px 20px;
+    margin-top:60px;
 }
 
 footer h3{
-
-    color:var(--secondary);
-
-    margin-bottom:12px;
-
-    font-size:1.6rem;
-
+    color:#00cfff;
+    margin-bottom:15px;
+    font-family: 'League Spartan', sans-serif;
 }
 
 footer p{
-
-    color:var(--text2);
-
-    line-height:1.8;
-
+    color:#d5d5d5;
+    font-family: 'League Spartan', sans-serif;
 }
 
-.footer-links{
+/* RESPONSIVO */
 
-    margin-top:25px;
+@media(max-width:768px){
 
-    display:flex;
+    header h1{
+        font-size:22px;
+    }
 
-    justify-content:center;
+    .logo{
+        width:100px;
+        height:45px;
+        left:10px;
+    }
 
-    gap:20px;
+    .menu{
+        width:280px;
+    }
 
-    flex-wrap:wrap;
+    .hero h2{
+        font-size:30px;
+    }
 
+    .hero p{
+        font-size:16px;
+    }
+
+    .grafico-canva iframe{
+        height:500px;
+    }
+}
+.secao{
+    position:relative;
 }
 
-.footer-links a{
+/* botão no canto do card */
+.btn-areas-canto{
+    position:absolute;
+    top:20px;
+    right:20px;
 
-    padding:12px 22px;
+    width:45px;
+    height:45px;
 
-    border-radius:35px;
-
-    background:rgba(255,255,255,.08);
-
-    transition:.3s;
-
-}
-
-.footer-links a:hover{
-
-    background:var(--primary);
-
-}
-
-/* ===========================
-   BOTÃO VOLTAR AO TOPO
-=========================== */
-
-.topo{
-
-    position:fixed;
-
-    bottom:30px;
-
-    right:30px;
-
-    width:58px;
-
-    height:58px;
-
+    background:#00cfff;
     border:none;
-
     border-radius:50%;
 
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
+    cursor:pointer;
+    font-size:18px;
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:0.3s;
+}
+
+.btn-areas-canto:hover{
+    background:#00a6d6;
+    transform:scale(1.1);
+}
+
+/* container do título + botão */
+.titulo-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    position:relative;
+}
+
+/* botão no canto */
+.btn-areas-canto{
+    background:#5ce1e6;
+    border:none;
+    color:#071826;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-areas-canto:hover{
+    transform:scale(1.1);
+}
+
+/* POPUP */
+.popup-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+/* caixa */
+.popup-box{
+    background:#102a42;
+    width:90%;
+    max-width:800px;
+    max-height:80vh;
+    border-radius:20px;
+    padding:25px;
+    position:relative;
     color:white;
+}
 
-    font-size:24px;
+/* scroll interno */
+.popup-scroll{
+    max-height:65vh;
+    overflow-y:auto;
+    padding-right:10px;
+}
+
+.popup-box h2{
+    color:#5ce1e6;
+    margin-bottom:15px;
+}
+
+.popup-box h3{
+    color:#5ce1e6;
+    margin-top:15px;
+}
+
+.fechar-popup{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.menu-links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.menu-link-btn{
+    display:block;
+    width:100%;
+
+    padding:12px;
+
+    background:#00cfff;
+    color:#071826;
+
+    text-decoration:none;
+    text-align:center;
+
+    border:none;
+    border-radius:10px;
+
+    font-weight:bold;
+    font-size:16px;
 
     cursor:pointer;
 
+    transition:0.3s;
+}
+
+.menu-link-btn:hover{
+    background:#5ce1e6;
+    transform:translateY(-2px);
+}
+
+/* CAIXAS DAS ÁREAS */
+
+.caixas-ti{
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
-    box-shadow:0 15px 35px rgba(10,132,255,.35);
-
-    transition:.35s;
-
-    z-index:9999;
-
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:30px;
 }
 
-.topo:hover{
+.caixa-ti{
+    width:350px;
+    min-height:450px;
 
-    transform:translateY(-5px) scale(1.08);
+    background:#0d2235;
 
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* ===========================
-   ANIMAÇÕES
-=========================== */
-
-.fade{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:.8s;
-
+.caixa-ti:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,207,255,0.25);
 }
 
-.fade.ativo{
+.caixa-ti img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
 
-    opacity:1;
+    background:white;
 
-    transform:translateY(0);
+    border-radius:20px;
 
+    padding:10px;
+
+    margin-bottom:20px;
 }
 
-/* ===========================
-   RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-.podcast{
-
-    padding:35px;
-
+.caixa-ti h3{
+    color:#00cfff;
+    margin-bottom:15px;
+    font-size:26px;
 }
 
-.podcast iframe{
-
-    height:320px;
-
+.caixa-ti p{
+    line-height:1.7;
+    color:#d5d5d5;
+    font-size:17px;
 }
 
-.canva iframe{
+/* CAIXA IMAGEM + TEXTO */
 
-    height:420px;
-
+.destaque-ti{
+    background:#102a42;
 }
 
-.topo{
-
-    width:52px;
-
-    height:52px;
-
-}
-
-}
-
-@media(max-width:600px){
-
-footer{
-
-    padding:40px 20px;
-
-}
-
-.footer-links{
-
-    flex-direction:column;
-
+.destaque-conteudo{
+    display:flex;
     align-items:center;
-
+    gap:35px;
 }
 
+.destaque-conteudo img{
+    width:350px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.destaque-texto{
+    flex:1;
+}
+
+.destaque-texto h2{
+    color:#00cfff;
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.destaque-texto p{
+    line-height:1.8;
+    font-size:18px;
+    color:#d5d5d5;
+    text-align:justify;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .destaque-conteudo{
+        flex-direction:column;
+    }
+
+    .destaque-conteudo img{
+        width:100%;
+        height:auto;
+    }
+
+    .destaque-texto h2{
+        text-align:center;
+    }
 }
