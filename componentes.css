@@ -1,0 +1,460 @@
+/* ==========================================================
+   PROJETO TI V5
+   COMPONENTES.CSS
+   PARTE 1
+========================================================== */
+
+/* ===========================
+   HERO DA PÁGINA
+=========================== */
+
+.hero{
+
+    position:relative;
+
+}
+
+.hero::before{
+
+    animation:flutuar 8s ease-in-out infinite;
+
+}
+
+/* ===========================
+   GRID DOS COMPONENTES
+=========================== */
+
+.cards-grid{
+
+    align-items:stretch;
+
+}
+
+.card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+/* ===========================
+   IMAGENS DOS CARDS
+=========================== */
+
+.card img{
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   CONTEÚDO
+=========================== */
+
+.card-conteudo{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.card-conteudo p{
+
+    flex:1;
+
+}
+
+.card h3{
+
+    margin-top:10px;
+
+}
+
+/* ===========================
+   ÍCONES
+=========================== */
+
+.card-icone{
+
+    margin-bottom:20px;
+
+    box-shadow:
+
+    0 10px 30px rgba(10,132,255,.30);
+
+}
+/* ==========================================================
+   PROJETO TI V5
+   COMPONENTES.CSS
+   PARTE 2
+   FUNCIONAMENTO • PASSOS
+========================================================== */
+
+/* ===========================
+   GRID DOS PASSOS
+=========================== */
+
+.passos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+/* ===========================
+   CARD DO PASSO
+=========================== */
+
+.passo{
+
+    position:relative;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        180deg,
+        rgba(20,46,73,.95),
+        rgba(8,22,35,.98)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+
+}
+
+.passo:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(10,132,255,.25);
+
+}
+
+/* ===========================
+   EFEITO DE BRILHO
+=========================== */
+
+.passo::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.passo:hover::before{
+
+    left:150%;
+
+}
+
+/* ===========================
+   NÚMERO
+=========================== */
+
+.numero{
+
+    width:70px;
+
+    height:70px;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    box-shadow:0 12px 30px rgba(10,132,255,.35);
+
+}
+
+/* ===========================
+   TÍTULO
+=========================== */
+
+.passo h3{
+
+    color:var(--secondary);
+
+    margin-bottom:15px;
+
+    font-size:1.5rem;
+
+}
+
+/* ===========================
+   TEXTO
+=========================== */
+
+.passo p{
+
+    color:var(--text2);
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+    .passos{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ==========================================================
+   PROJETO TI V5
+   COMPONENTES.CSS
+   PARTE 3 (FINAL)
+   ANIMAÇÕES • EFEITOS • RESPONSIVIDADE
+========================================================== */
+
+/* ===========================
+   ANIMAÇÕES DOS CARDS
+=========================== */
+
+.card,
+.passo{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:subir .8s ease forwards;
+
+}
+
+.card:nth-child(1){animation-delay:.1s;}
+.card:nth-child(2){animation-delay:.2s;}
+.card:nth-child(3){animation-delay:.3s;}
+.card:nth-child(4){animation-delay:.4s;}
+.card:nth-child(5){animation-delay:.5s;}
+.card:nth-child(6){animation-delay:.6s;}
+
+@keyframes subir{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   BRILHO NOS CARDS
+=========================== */
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:25px;
+
+    pointer-events:none;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+/* ===========================
+   EFEITO HOVER
+=========================== */
+
+.card:hover{
+
+    transform:
+
+        translateY(-12px)
+
+        scale(1.02);
+
+}
+
+.passo:hover{
+
+    transform:
+
+        translateY(-12px)
+
+        scale(1.02);
+
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.hero-botoes{
+
+    margin-top:50px;
+
+}
+
+.hero-botoes a{
+
+    min-width:220px;
+
+}
+
+/* ===========================
+   SCROLL SUAVE
+=========================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media(max-width:768px){
+
+    .card img{
+
+        height:210px;
+
+    }
+
+    .numero{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.6rem;
+
+    }
+
+    .passo{
+
+        padding:25px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .card{
+
+        border-radius:20px;
+
+    }
+
+    .card img{
+
+        height:180px;
+
+    }
+
+    .card-conteudo{
+
+        padding:22px;
+
+    }
+
+    .passo{
+
+        padding:22px;
+
+    }
+
+    .passo h3{
+
+        font-size:1.3rem;
+
+    }
+
+    .passo p{
+
+        font-size:.95rem;
+
+    }
+
+}

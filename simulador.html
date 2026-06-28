@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Simulador de Carreira</title>
+
+    <link rel="stylesheet" href="simulador.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">Simulador</a>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Início</a>
+
+        <a href="quiz.html">Quiz</a>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">
+
+            🚀 SIMULADOR DE CARREIRA
+
+        </span>
+
+        <h1>
+
+            Descubra qual área da TI combina com você
+
+        </h1>
+
+        <p>
+
+            Responda algumas perguntas e receba um perfil personalizado.
+
+        </p>
+
+        <button id="btnComecar">
+
+            Iniciar Simulação
+
+        </button>
+
+    </div>
+
+</section>
+
+<section class="simulador">
+
+    <div class="simulador-card">
+
+        <div class="topo">
+
+            <h2>Simulação</h2>
+
+            <span id="contador">
+
+                Pergunta 1 de 8
+
+            </span>
+
+        </div>
+
+        <div class="barra">
+
+            <div id="progresso"></div>
+
+        </div>
+
+        <h3 id="pergunta">
+
+            Clique em "Iniciar Simulação"
+
+        </h3>
+
+        <div id="respostas">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="resultado" class="resultado">
+
+    <div class="resultado-card">
+
+        <div id="rankingTop3"></div>
+
+        <div class="perfil-principal">
+
+            <div id="iconePerfil">💻</div>
+
+            <h1 id="perfil"></h1>
+
+            <div class="barra-final">
+
+                <div id="compatibilidade"></div>
+
+            </div>
+
+            <p id="porcentagem"></p>
+
+        </div>
+        <div id="estatisticas" class="estatisticas"></div>
+
+        <div id="informacoes"></div>
+
+        <button onclick="location.reload()">
+
+            Refazer Simulação
+
+        </button>
+
+        <a href="index.html">
+
+            ← Voltar ao site
+
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+
+        © <span id="ano"></span> Alunos Senai
+
+    </p>
+
+</footer>
+
+<script src="simulador.js"></script>
+
+</body>
+
+</html>
