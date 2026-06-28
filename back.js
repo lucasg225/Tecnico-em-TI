@@ -103,12 +103,12 @@ window.addEventListener("load", controlarBotaoTopo);
 =========================== */
 
 const header = document.querySelector(".header-apple");
-let ultimoScroll = 0;
+let ultimoScroll = window.pageYOffset || 0;
 
 function controlarHeader() {
     if (!header) return;
 
-    const atual = window.scrollY || window.pageYOffset;
+    const atual = window.pageYOffset || window.scrollY || 0;
 
     if (atual > 60) {
         header.classList.add("header-scroll");
