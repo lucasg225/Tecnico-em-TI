@@ -102,27 +102,36 @@ window.addEventListener("load", controlarBotaoTopo);
    HEADER INTELIGENTE
 =========================== */
 const header = document.querySelector(".header-apple");
-let ultimoScroll = window.pageYOffset || 0;
+let ultimoScroll = window.scrollY || 0;
 
 function controlarHeader() {
     if (!header) return;
 
-    const atual = window.pageYOffset || window.scrollY || 0;
+    const atual = window.scrollY || 0;
+
+    header.style.transition = "transform .35s ease, background .35s ease, box-shadow .35s ease";
+    header.style.willChange = "transform";
 
     if (atual > 60) {
-        header.classList.add("header-scroll");
+        header.style.background = "rgba(5,18,32,.92)";
+        header.style.boxShadow = "0 20px 45px rgba(0,0,0,.45)";
     } else {
-        header.classList.remove("header-scroll");
+        header.style.background = "rgba(8,22,35,.72)";
+        header.style.boxShadow = "0 20px 40px rgba(0,0,0,.35)";
     }
 
     if (atual > ultimoScroll && atual > 120) {
-        header.classList.add("header-hide");
+        header.style.transform = "translateY(-110%)";
     } else {
-        header.classList.remove("header-hide");
+        header.style.transform = "translateY(0)";
     }
 
     ultimoScroll = atual;
 }
+
+window.addEventListener("scroll", controlarHeader, { passive: true });
+window.addEventListener("load", controlarHeader);
+controlarHeader();
 /* ===========================
    EFEITO NOS CARDS
 =========================== */
