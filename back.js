@@ -101,7 +101,6 @@ window.addEventListener("load", controlarBotaoTopo);
 /* ===========================
    HEADER INTELIGENTE
 =========================== */
-
 const header = document.querySelector(".header-apple");
 let ultimoScroll = window.pageYOffset || 0;
 
