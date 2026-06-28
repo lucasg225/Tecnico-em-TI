@@ -98,12 +98,10 @@ window.addEventListener("load", controlarBotaoTopo);
 /* ===========================
    HEADER
 =========================== */
-
-
-
 /* ===========================
    HEADER INTELIGENTE
 =========================== */
+
 const header = document.querySelector(".header-apple");
 let ultimoScroll = 0;
 
@@ -126,10 +124,6 @@ function controlarHeader() {
 
     ultimoScroll = atual;
 }
-
-window.addEventListener("scroll", controlarHeader);
-window.addEventListener("load", controlarHeader);
-
 /* ===========================
    EFEITO NOS CARDS
 =========================== */
@@ -186,14 +180,18 @@ if (ano) {
 ========================================== */
 
 window.addEventListener("scroll", () => {
-
     revelarElementos();
-
     controlarBotaoTopo();
-
     animarContadores();
-
+    controlarHeader();
 });
+
+window.addEventListener("load", () => {
+    revelarElementos();
+    controlarBotaoTopo();
+    controlarHeader();
+});
+
 /* ===========================
    TI EM NÚMEROS
 =========================== */
