@@ -343,6 +343,15 @@ p{
 
 .header-hide{
     transform: translateY(-100%);
+}
+
+@media (max-width: 900px){
+    .header-apple{
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+    }
    }
 /* ===========================
    LOGO
