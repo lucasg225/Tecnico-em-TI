@@ -320,39 +320,16 @@ p{
     width: 100%;
     height: 85px;
     padding: 0 30px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background: rgba(8,22,35,.72);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-
     border: 1px solid rgba(255,255,255,.08);
     box-shadow: 0 20px 40px rgba(0,0,0,.35);
-
     z-index: 9999;
-    transition: transform .35s ease, background .35s ease, box-shadow .35s ease;
 }
-
-.header-scroll{
-    background: rgba(5,18,32,.92);
-    box-shadow: 0 20px 45px rgba(0,0,0,.45);
-}
-
-.header-hide{
-    transform: translateY(-100%);
-}
-
-@media (max-width: 900px){
-    .header-apple{
-        height: auto;
-        padding: 20px;
-        flex-direction: column;
-        gap: 18px;
-    }
-   }
 /* ===========================
    LOGO
 =========================== */
