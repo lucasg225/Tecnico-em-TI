@@ -103,14 +103,15 @@ window.addEventListener("load", controlarBotaoTopo);
 =========================== */
 const header = document.querySelector(".header-apple");
 let ultimoScroll = window.scrollY || 0;
+let headerTicking = false;
 
-function controlarHeader() {
+function atualizarHeader() {
     if (!header) return;
 
     const atual = window.scrollY || 0;
+    const descendo = atual > ultimoScroll;
 
     header.style.transition = "transform .35s ease, background .35s ease, box-shadow .35s ease";
-    header.style.willChange = "transform";
 
     if (atual > 60) {
         header.style.background = "rgba(5,18,32,.92)";
@@ -120,18 +121,26 @@ function controlarHeader() {
         header.style.boxShadow = "0 20px 40px rgba(0,0,0,.35)";
     }
 
-    if (atual > ultimoScroll && atual > 120) {
-        header.style.transform = "translateY(-110%)";
+    if (descendo && atual > 120) {
+        header.style.transform = "translate3d(0,-150%,0)";
     } else {
-        header.style.transform = "translateY(0)";
+        header.style.transform = "translate3d(0,0,0)";
     }
 
     ultimoScroll = atual;
+    headerTicking = false;
 }
 
-window.addEventListener("scroll", controlarHeader, { passive: true });
-window.addEventListener("load", controlarHeader);
-controlarHeader();
+function onScrollHeader() {
+    if (!headerTicking) {
+        headerTicking = true;
+        requestAnimationFrame(atualizarHeader);
+    }
+}
+
+window.addEventListener("scroll", onScrollHeader, { passive: true });
+window.addEventListener("load", atualizarHeader);
+atualizarHeader();
 /* ===========================
    EFEITO NOS CARDS
 =========================== */
