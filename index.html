@@ -708,7 +708,21 @@
 <!-- ==========================================================
      RODAPÉ
 ========================================================== -->
-<section class="ferramentas" id="ferramentas">
+<div id="gameOverlay" class="game-overlay">
+    <div class="game-topbar">
+        <span>Jogo Interativo</span>
+        <button id="btnFecharJogo" class="game-close" type="button">✕</button>
+    </div>
+
+    <iframe
+        id="gameFrame"
+        src=""
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+</div>
+    
+    <section class="ferramentas" id="ferramentas">
 
 
         <h2>Ferramentas Interativas</h2>
