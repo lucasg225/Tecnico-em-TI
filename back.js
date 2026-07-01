@@ -276,3 +276,13 @@ function selecionar(card,indiceResposta){
 
 }
 console.log("Projeto TI V5 carregado com sucesso.");
+
+
+const btn = document.getElementById("btnJogar");
+
+btn.addEventListener("click", () => {
+    document.getElementById("gameContainer").style.display = "block";
+    document.getElementById("gameFrame").src =
+        "https://ryzerysa.github.io/jogo_feira_do_senai/";
+    btn.style.display = "none";
+});
