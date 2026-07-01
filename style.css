@@ -2420,6 +2420,10 @@ html, body{
         border-radius: 20px;
     }
 }
+.jogo-area{
+    margin-top: 35px;
+    text-align: center;
+}
 
 .game-overlay{
     position: fixed;
