@@ -275,14 +275,31 @@ function selecionar(card,indiceResposta){
     },1200);
 
 }
-console.log("Projeto TI V5 carregado com sucesso.");
+const btnJogar = document.getElementById("btnJogar");
+const gameOverlay = document.getElementById("gameOverlay");
+const gameFrame = document.getElementById("gameFrame");
+const btnFecharJogo = document.getElementById("btnFecharJogo");
 
+if (btnJogar && gameOverlay && gameFrame) {
+    btnJogar.addEventListener("click", () => {
+        gameFrame.src = "https://ryzerysa.github.io/jogo_feira_do_senai/";
+        gameOverlay.classList.add("ativo");
+        document.body.style.overflow = "hidden";
 
-const btn = document.getElementById("btnJogar");
+        if (gameOverlay.requestFullscreen) {
+            gameOverlay.requestFullscreen().catch(() => {});
+        }
+    });
+}
 
-btn.addEventListener("click", () => {
-    document.getElementById("gameContainer").style.display = "block";
-    document.getElementById("gameFrame").src =
-        "https://ryzerysa.github.io/jogo_feira_do_senai/";
-    btn.style.display = "none";
-});
+if (btnFecharJogo && gameOverlay) {
+    btnFecharJogo.addEventListener("click", () => {
+        gameOverlay.classList.remove("ativo");
+        gameFrame.src = "";
+        document.body.style.overflow = "";
+
+        if (document.fullscreenElement) {
+            document.exitFullscreen().catch(() => {});
+        }
+    });
+}
