@@ -275,6 +275,7 @@ function selecionar(card,indiceResposta){
     },1200);
 
 }
+
 const btnJogar = document.getElementById("btnJogar");
 const gameOverlay = document.getElementById("gameOverlay");
 const gameFrame = document.getElementById("gameFrame");
@@ -285,21 +286,13 @@ if (btnJogar && gameOverlay && gameFrame) {
         gameFrame.src = "https://ryzerysa.github.io/jogo_feira_do_senai/";
         gameOverlay.classList.add("ativo");
         document.body.style.overflow = "hidden";
-
-        if (gameOverlay.requestFullscreen) {
-            gameOverlay.requestFullscreen().catch(() => {});
-        }
     });
 }
 
-if (btnFecharJogo && gameOverlay) {
+if (btnFecharJogo && gameOverlay && gameFrame) {
     btnFecharJogo.addEventListener("click", () => {
         gameOverlay.classList.remove("ativo");
         gameFrame.src = "";
         document.body.style.overflow = "";
-
-        if (document.fullscreenElement) {
-            document.exitFullscreen().catch(() => {});
-        }
     });
 }
