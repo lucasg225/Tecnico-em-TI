@@ -762,26 +762,28 @@
             </article>
 
          </div>
+  <section class="secao fade" id="jogo">
+    <h2>Jogo Interativo</h2>
+    <p class="texto-centro">Teste o jogo do projeto diretamente aqui no site.</p>
 
-</section>
-<section class="jogo fade" id="jogo">
-    <h2>🎮 Jogo Interativo</h2>
+    <button id="btnJogar" class="btn-ferramenta">🎮 Jogar Agora</button>
 
-    <p>Teste o jogo do projeto diretamente aqui no site.</p>
+    <div id="gameOverlay" class="game-overlay">
+        <div class="game-topbar">
+            <span>Jogo Interativo</span>
+            <button id="btnFecharJogo" class="game-close">✕</button>
+        </div>
 
-    <button id="btnJogar" class="btn-jogar">
-        ▶ Jogar Agora
-    </button>
-
-    <div id="gameContainer" style="display:none;">
         <iframe
-            src=""
             id="gameFrame"
-            loading="lazy"
-            allowfullscreen>
+            src=""
+            allowfullscreen
+            loading="lazy">
         </iframe>
     </div>
-</section>
+   </section>
+  </section>
+
 <footer>
 
     <h3>
